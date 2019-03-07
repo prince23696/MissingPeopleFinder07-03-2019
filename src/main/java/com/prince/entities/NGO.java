@@ -13,6 +13,7 @@ public class NGO {
 			private String address;
 			private String mobile;
 			private String regi_no;
+			private String dor;
 			private String trusty;
 			private String area;
 			public String getEmail() {
@@ -51,6 +52,13 @@ public class NGO {
 			public void setRegi_no(String regi_no) {
 				this.regi_no = regi_no;
 			}
+			
+			public String getDor() {
+				return dor;
+			}
+			public void setDor(String dor) {
+				this.dor = dor;
+			}
 			public String getTrusty() {
 				return trusty;
 			}
@@ -63,8 +71,10 @@ public class NGO {
 			public void setArea(String area) {
 				this.area = area;
 			}
+			
 			public NGO(String email, String password, String name,
-					String address, String mobile,String regi_no, String trusty, String area) {
+					String address, String mobile, String regi_no, String dor,
+					String trusty, String area) {
 				super();
 				this.email = email;
 				this.password = password;
@@ -72,6 +82,7 @@ public class NGO {
 				this.address = address;
 				this.mobile = mobile;
 				this.regi_no = regi_no;
+				this.dor = dor;
 				this.trusty = trusty;
 				this.area = area;
 			}
@@ -86,9 +97,11 @@ public class NGO {
 			public String toString() {
 				return "NGO [email=" + email + ", password=" + password
 						+ ", name=" + name + ", address=" + address
-						+ ", mobile=" + mobile + ", regi_no=" + regi_no + ", trusty=" + trusty
-						+ ", area=" + area + "]";
+						+ ", mobile=" + mobile + ", regi_no=" + regi_no
+						+ ", dor=" + dor + ", trusty=" + trusty + ", area="
+						+ area + "]";
 			}
+			
 			
 					
 }

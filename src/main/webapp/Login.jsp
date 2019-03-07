@@ -1,127 +1,127 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-h3 {
-	color: red;
-	font-size: 30px;
-	text-shadow: 2px 2px blue;
-}
+<title>Login-Page | Missing-People-Finder</title>
+<!-- Compiled and minified CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="home.css">
 
-body {
-	background-color: #ffff99;
-	margin: 0;
-	padding: 0;
-	background-size: cover;
-	background-position: center;
-	font-family: sans-serif;
-}
+<!-- Compiled and minified JavaScript -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta charset="utf-8">
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.dropdown-trigger');
+		var instances = M.Dropdown.init(elems);
+	});
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('select');
+		var instances = M.FormSelect.init(elems);
+	});
+</script>
 
-.button {
-	background-color: #ccffb2;
-	border: none;
-	color: black;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none dispaly:inline-block;
-	font-size: 25px;
-	margin: 4px 2px;
-	cursor: pointer;
-}
 
-.button1 {
-	background-color: #A9A9A9;
-	border: none;
-	color: black;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none dispaly:inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-}
-
-.menu {
-	width: 100%;
-	height: 45px;
-	background-color: #333;
-}
-
-.menu a {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	padding: 0px 40px;
-	font-size: 20px;
-}
-
-.menu a:hover {
-	background-color: #ddd;
-	color: green;
-}
-
-.menu ul {
-	list-style: none;
-}
-
-.login {
-	width: 325px;
-	height: 420px;
-	background: rgba(0, 0, 0, 0, 5);
-	color: white;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	box-sizing: border-box;
-}
-</style>
-<title>Home | Missing-People-Finder</title>
 </head>
-<body>
-	<p style="margin-top:1em">
-		<font size="5" face="sans-serif"> <marquee>Welcome to the Portal to Find Missing People</marquee>
-			<div class="menu">
-				<a href="index.jsp">Home</a> <a href="AboutUs.jsp">About us</a> <a href="ContactUs.jsp">Contact
-					us</a> <a href="registration.jsp">Registration</a> <a href="Help.jsp">Help!!</a>
-			</div>
-			<h3>
-				<center>We Are Here To Help You Finding And Helping ForMissing Person</center>
-			</h3> <br>
-	</p><br>
-    <div class="login">
-	<br><h3>Login Here!!!</h3>
-	<form action="VerifyUser">
+<body bgcolor="#eeeeee">
+	<p style="margin-top: 1em">
+		<font size="5" face="sans-serif"> <marquee>Welcome to
+				the Portal to Find Missing People</marquee>
 
-		<table>
-			<tr>
-				<th>Email :</th>
-				<td><input type="text" name="userid" placeholder="Enter Email" /></td>
-			</tr>
-			<tr>
-				<th>Password :</th>
-				<td><input type="password" name="password"placeholder="Enter Password" /></td>
-			</tr>
-			<tr>
-				<th>UserType :</th>
-				<td><select name="utype">
-						<option>Admin</option>
-						<option>User</option>
-						<option>NGO</option>
-						<option>Police</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td><a href="RecoverPassword.jsp">Forget Password?? </a>
-			</tr>
-			<tr></tr>
-			<tr>
-				<td><input type="submit" value="Login" /></td>
-				<td><input type="reset" value="Reset" /></td>
-			</tr>
-		</table>
-	</form>
-</div>
+		</font>
+	</p>
+
+
+	<nav>
+		<div class="nav-wrapper  " style="background-color: teal">
+			<div class="container">
+
+				<a href="index.jsp" class="brand-logo"> Home</a>
+				<ul class="right hide-on-med-and-down" id="nav-mobile">
+
+					<li><a href="ContactUs.jsp">Contact us</a></li>
+					<li><a href="AboutUs.jsp">About us</a>
+					<li><a href="Login.jsp">Login</a></li>
+					<li><a class="dropdown-trigger" href="#!"
+						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
+							class="material-icons right">arrow_drop_down</i></a></li>
+
+					<li><a href="Help.jsp">Help!!</a></li>
+
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+	<br>
+	<br>
+
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="registration.jsp">User-Registration</a></li>
+		<li class="divider"></li>
+		<li><a href="policeregistration.jsp">Police-Registration</a></li>
+		<li class="divider"></li>
+		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
+	</ul>
+	<div class="container" class="row">
+		<div class="card">
+
+			<div class="container" class="row">
+				<form action="VerifyUser">
+					<div class="row">
+
+						<div align="Center">
+							<br>
+							<h4 styleclass="header center">LOGIN HERE!!!</h4>
+							<br>
+						</div>
+
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<input name="userid" type="text" class="validate" id="userid"
+									required> <label for="userid">E-Mail</label> <span
+									class="helper-text" data-error="Enter Email Address"></span>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<input name="password" type="password" id="password"
+									maxlength="20" minlength="8" class="validate" required>
+								<label for="password">Password</label> <span class="helper-text"
+									data-error="Enter Password"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<select name="utype">
+									<option value="" disabled selected>Choose your option</option>
+									<option>Admin</option>
+									<option>User</option>
+									<option>Police</option>
+									<option>NGO</option>
+								</select> <label>User Type</label> <a href="RecoverPassword.jsp">ForgetPassword??</a>
+							</div>
+						</div>
+						<div class="row">
+
+							<div class="col s4 offset-s1" onclick="check()">
+								<button type="submit" class="btn red darken-4"
+									class="btn waves-effect waves-red waves-ripple btn-large:hover"
+									id='submit'>Login</button>
+								<br> <BR>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
 </body>
-</html>	
+</html>

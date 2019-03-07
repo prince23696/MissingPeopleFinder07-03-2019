@@ -83,7 +83,9 @@ public class VerifyUser extends HttpServlet {
 		}
 		else if (type.equals("Admin")) {
 
-			if (username.equals("prince") || username.equals("PRINCE")) {
+			if (username.equals("prince@gmail.com") || username.equals("PRINCE")) 
+					if(password.equals("11111111")){
+					
 				// storing the userid to session object
 				// step-1 (fetch the session created for this user
 				HttpSession session = request.getSession();
@@ -102,4 +104,4 @@ public class VerifyUser extends HttpServlet {
 		}
 	}
 
-}
+	}

@@ -76,6 +76,12 @@
   	<description></description>
   	<servlet-class>com.prince.Logout</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SaveMissingPerson</servlet-name>
+  	<display-name>SaveMissingPerson</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.SaveMissingPerson</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
   	<url-pattern>/SaveUser</url-pattern>
@@ -124,6 +130,10 @@
   	<servlet-name>Logout</servlet-name>
   	<url-pattern>/Logout</url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+  	<servlet-name>SaveMissingPerson</servlet-name>
+  	<url-pattern>/SaveMissingPerson</url-pattern>
+  </servlet-mapping>
+ 
   
 </web-app>

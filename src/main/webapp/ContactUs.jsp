@@ -1,73 +1,70 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>Contact-Us | Missing-People-Finder</title>
-<style type="text/css">
-h3 {
-	color: red;
-	font-size: 30px;
-	text-shadow: 2px 2px blue;
-}
-body {
-	background-color: #ffff99;
-}
+    <head>
+        <title>Home</title>
+          <!-- Compiled and minified CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="home.css">
 
-.menu {
-	width: 101%;
-	height: 45px;
-	background-color: #333;
-}
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta charset="utf-8">
+         <script type="text/javascript">
+    
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems);
+        });
+		 document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+		
+        </script>
 
-.menu a {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	padding: 0px 40px;
-	font-size: 20px;
-}
+      
+    </head>
+    <body bgcolor="#eeeeee">
+      <p style="margin-top: 1em">
+    <font size="5" face="sans-serif"> <marquee>Welcome to
+        the Portal to Find Missing People</marquee>
 
-.menu a:hover {
-	background-color: #ddd;
-	color: green;
-}
+    </font>
+  </p>
 
-.menu ul {
-	list-style: none;
-}
-</style>
 
-</head>
-<body>
-	<p style="margin-top: 1em">
-		<font size="5" face="sans-serif"> <marquee>Welcome to
-				the Portal to Find Missing People</marquee>
+ <nav>
+            <div class="nav-wrapper  " style="background-color:teal">
+              <div class="container">
 
-		</font>
-	</p>
-	<div class="menu">
-		<a href="index.jsp">Home</a> <a href="AboutUs.jsp">About us</a><a
-			href="ContactUs.jsp">Contact us</a><a href="Login.jsp">Login</a>
-		<div class="dropdown">
-			<ul>
-				<a>Registration</a>
+             <a href = "index.jsp" class="brand-logo" >  Home</a>
+                <ul class="right hide-on-med-and-down" id="nav-mobile">
+                   
+                    <li> <a href="ContactUs.jsp">Contact us</a></li>
+                    <li><a href="AboutUs.jsp">About us</a>  
+                    <li><a href="Login.jsp">Login</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"  onclick="instance.onOpenEnd();">Registration<i class="material-icons right">arrow_drop_down</i></a></li>
+                   
+                    <li><a href="Help.jsp">Help!!</a></li>
 
-				<li><a href="registration.jsp">User-Registration</a></li>
-				<li><a href="policeregistration.jsp">Police-Registration</a></li>
-
-				<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
-			</ul>
-
-		</div>
-		<a href="Help.jsp">Help!!</a>
-	</div>
-
-	<h3><center>Contact-Us</center></h3>
+                </ul>
+              
+            
+          </div>
+            </div>
+        </nav><br><br>
+     
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="registration.jsp">User-Registration</a></li>
+  <li class="divider"></li>
+  <li><a href="policeregistration.jsp">Police-Registration</a></li>
+  <li class="divider"></li>
+  <li><a href="ngoregistration.jsp">NGO-Registration</a></li>
+</ul>
+<h3><center>Contact-Us</center></h3>
 
 		<center><p>
-		Missing-People-Finder
-		
-		
-		</p></center>
+		Missing-People-Finder</p>
 </body>
 </html>

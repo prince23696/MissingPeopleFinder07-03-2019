@@ -11,10 +11,22 @@ public class User {
 		private String name;
 		private String address;
 		private String mobile;
+		private String dob;
 		private String gender;
+	
+		
 		public String getEmail() {
 			return email;
 		}
+		
+		public String getDob() {
+			return dob;
+		}
+
+		public void setDob(String dob) {
+			this.dob = dob;
+		}
+
 		public void setEmail(String email) {
 			this.email = email;
 		}
@@ -48,30 +60,34 @@ public class User {
 		public void setGender(String gender) {
 			this.gender = gender;
 		}
+		
 		public User(String email, String password, String name, String address,
-				String mobile, String gender) {
+				String mobile, String dob, String gender) {
 			super();
 			this.email = email;
 			this.password = password;
 			this.name = name;
 			this.address = address;
 			this.mobile = mobile;
+			this.dob = dob;
 			this.gender = gender;
 		}
-		public User() {
-			super();
-		}
+
 		public User(String email) {
 			super();
 			this.email = email;
 		}
+
+		public User() {
+			super();
+		}
+
 		@Override
 		public String toString() {
 			return "User [email=" + email + ", password=" + password
 					+ ", name=" + name + ", address=" + address + ", mobile="
-					+ mobile + ", gender=" + gender + "]";
+					+ mobile + ", dob=" + dob + ", gender=" + gender + "]";
 		}
-		
 				
 		
 		

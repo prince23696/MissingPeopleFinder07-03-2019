@@ -21,9 +21,9 @@ public class SaveUser extends HttpServlet {
 		String address=request.getParameter("address");
 		String mobile=request.getParameter("mobile");
 		String gender=request.getParameter("gender");
-		
+		String dob=request.getParameter("dob");
 		//process the data
-		User u=new User(email,password,name,address,mobile,gender);
+		User u=new User(email,password,name,address,mobile,dob,gender);
 		UserDAO ud=new UserDAO();
 		ud.addUser(u);
 		

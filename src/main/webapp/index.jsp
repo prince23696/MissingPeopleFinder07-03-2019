@@ -1,125 +1,68 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-h3 {
-	color: red;
-	font-size: 30px;
-	text-shadow: 2px 2px blue;
-}
-.dropdown {
-	background-size: cover;
-	font-family: Arial;
-	color: white;
-}
-
-.dropdown ul {
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-}
-
-.dropdown ul li {
-	float: left;
-	width: 150px;
-	height: 40px;
-	background-color: black;
-	opacity: .8;
-	line-height: 25px;
-	text-align: center;
-	font-size: none;
-}
-
-.dropdown ul li a {
-	text-decoration: none;
-}
-body {
-	background-color: #ffff99;
-}
-
-.button {
-	background-color: #ff0000;
-	border: none;
-	color: black;
-	padding: 15px 28px;
-	text-align: center;
-	text-decoration: none dispaly:inline-block;
-	font-size: 25px;
-	margin: 4px 220px;
-	cursor: pointer;
-}
-
-.button1 {
-	background-color: #ff0000;
-	border: none;
-	color: black;
-	padding: 15px 28px;
-	text-align: center;
-	text-decoration: none dispaly:inline-block;
-	font-size: 25px;
-	margin: 4px 150px;
-	cursor: pointer;
-}
-
-.menu {
-	width: 101%;
-	height: 45px;
-	background-color: #333;
-}
-
-.menu a {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	padding: 0px 40px;
-	font-size: 20px;
-}
-
-.menu a:hover {
-	background-color: #ddd;
-	color: green;
-}
-
-.menu ul {
-	list-style: none;
-}
-</style>
 <title>Home | Missing-People-Finder</title>
+<!-- Compiled and minified CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta charset="utf-8">
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.dropdown-trigger');
+		var instances = M.Dropdown.init(elems);
+	});
+</script>
 </head>
-<body>
+<body bgcolor="#eeeeee">
 	<p style="margin-top: 1em">
 		<font size="5" face="sans-serif"> <marquee>Welcome to
 				the Portal to Find Missing People</marquee>
-
 		</font>
 	</p>
-	<div class="menu">
-		<a href="index.jsp">Home</a> <a href="AboutUs.jsp">About us</a><a
-			href="ContactUs.jsp">Contact us</a><a href="Login.jsp">Login</a>
-		<div class="dropdown">
-		<li>
-			<ul>
-				<a>Registration</a>
+	<nav>
+		<div class="nav-wrapper  " style="background-color: teal">
+			<div class="container">
+				<a href="index.jsp" class="brand-logo">Home</a>
+				<ul class="right hide-on-med-and-down" id="nav-mobile">
 
-				<li><a href="registration.jsp">User-Registration</a></li>
-				<li><a href="policeregistration.jsp">Police-Registration</a></li>
+					<li><a href="ContactUs.jsp">Contact us</a></li>
+					<li><a href="AboutUs.jsp">About us</a>
+					<li><a href="Login.jsp">Login</a></li>
+					<li><a class="dropdown-trigger" href="#!"
+						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
+							class="material-icons right">arrow_drop_down</i></a></li>
 
-				<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
-			</ul>
-</li>
+					<li><a href="Help.jsp">Help!!</a></li>
+
+				</ul>
+			</div>
 		</div>
-		<a href="Help.jsp">Help!!</a>
+	</nav>
+	<br>
+	<br>
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="registration.jsp">User-Registration</a></li>
+		<li class="divider"></li>
+		<li><a href="policeregistration.jsp">Police-Registration</a></li>
+		<li class="divider"></li>
+		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
+	</ul>
+	<div class="container">
+		<div class="card " style="margin: -15px;:">
+			<br>
+			<h5 class="header center">We Are Here To Help You Finding And
+				Helping For Missing Person</h5>
+			<br>
+		</div>
+		<br> <br> <a
+			class="waves-effect waves-light btn-large red right">I WANT TO
+			FIND SOME ONE</a> <a class="waves-effect waves-light btn-large red left">I
+			WANT TO HELP</a>
 	</div>
-
-	<h3>
-		<center>We Are Here To Help You Finding And Helping
-			ForMissing Person</center>
-	</h3>
-
-
-	<a href="FindRegister.jsp" class="button">I want to Help</a>
-	<a href="Details.jsp" class="button1">I want to Find SomeOne</a>
-
 </body>
 </html>

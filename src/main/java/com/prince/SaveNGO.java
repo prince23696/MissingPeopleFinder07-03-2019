@@ -18,11 +18,12 @@ public class SaveNGO extends HttpServlet {
 		String address = request.getParameter("address");
 		String mobile = request.getParameter("mobile");
 		String regi_no = request.getParameter("regi_no");
+		String dor=request.getParameter("dor");
 		String trusty = request.getParameter("trusty");
-		String area = request.getParameter("area");
+		String area = request.getParameter("Area");
 
 		// process the data
-		NGO n = new NGO(email, password, name, address, mobile,	regi_no, trusty, area);
+		NGO n = new NGO(email, password, name, address, mobile,	regi_no,dor, trusty, area);
 		NGODAO ud = new NGODAO();
 		ud.addNGO(n);
 

@@ -13,6 +13,7 @@ public class Police {
 			private String address;
 			private String mobile;
 			private String gender;
+			private String dob;
 			private String police_id;
 			private String station_no;
 			private String area;
@@ -70,8 +71,13 @@ public class Police {
 			public void setArea(String area) {
 				this.area = area;
 			}
+		
+			public String getDob() {
+				return dob;
+			}
+			
 			public Police(String email, String password, String name,
-					String address, String mobile, String gender,
+					String address, String mobile, String gender, String dob,
 					String police_id, String station_no, String area) {
 				super();
 				this.email = email;
@@ -80,9 +86,13 @@ public class Police {
 				this.address = address;
 				this.mobile = mobile;
 				this.gender = gender;
+				this.dob = dob;
 				this.police_id = police_id;
 				this.station_no = station_no;
 				this.area = area;
+			}
+			public void setDob(String dob) {
+				this.dob = dob;
 			}
 			public Police(String email) {
 				super();
@@ -96,9 +106,9 @@ public class Police {
 				return "Police [email=" + email + ", password=" + password
 						+ ", name=" + name + ", address=" + address
 						+ ", mobile=" + mobile + ", gender=" + gender
-						+ ", police_id=" + police_id + ", station_no="
-						+ station_no + ", area=" + area + "]";
+						+ ", dob=" + dob + ", police_id=" + police_id
+						+ ", station_no=" + station_no + ", area=" + area + "]";
 			}
-			
+		
 			
 }
