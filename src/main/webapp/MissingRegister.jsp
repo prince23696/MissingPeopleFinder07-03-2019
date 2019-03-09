@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Missing Form </title>
+<title>Missing Form</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
@@ -93,7 +93,7 @@
 						<br>
 						<div align="Center">
 
-							<h4 styleclass="header center">Missing Form </h4>
+							<h4 styleclass="header center">Missing Form</h4>
 						</div>
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
@@ -109,19 +109,20 @@
 										data-error="Enter Email Address"></span>
 								</div>
 							</div>
-								<div class="row">
+							<div class="row">
 								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">import_contacts</i> <input name="police_id"
-										type="text" class="validate" id="police_id" required> <label
-										for="police_id">Police Id</label> <span class="helper-text"
-										data-error="Enter Police Id"></span>
+									<i class="material-icons prefix">import_contacts</i> <input
+										name="police_id" type="text" class="validate" id="police_id"
+										required> <label for="police_id">Police Id</label> <span
+										class="helper-text" data-error="Enter Police Id"></span>
 								</div>
-							</div>	<div class="row">
+							</div>
+							<div class="row">
 								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">home</i> <input name="station_no"
-										type="text" class="validate" id="station_no" required> <label
-										for="station_no">Station No.</label> <span class="helper-text"
-										data-error="Enter Station No."></span>
+									<i class="material-icons prefix">home</i> <input
+										name="station_no" type="text" class="validate" id="station_no"
+										required> <label for="station_no">Station No.</label>
+									<span class="helper-text" data-error="Enter Station No."></span>
 								</div>
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">home</i> <input name="Area"
@@ -140,7 +141,7 @@
 							</div>
 							<div class="row">
 								<div class="col s11">
-					Date_Of_Birth : <input type="date" name="dob">
+									Date_Of_Birth : <input type="date" name="dob">
 								</div>
 							</div>
 							<div class="row">
@@ -152,14 +153,14 @@
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="male"
-												type="radio"  /> <span>Male</span>
+												type="radio" /> <span>Male</span>
 											</label>
 										</p>
 									</div>
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="female"
-												type="radio"  /> <span>Female</span>
+												type="radio" /> <span>Female</span>
 											</label>
 										</p>
 									</div>
@@ -168,8 +169,8 @@
 							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input
-										id="icon_telephone" type="tel"name="mobile" class="validate"> <label
-										for="icon_telephone">Telephone</label>
+										id="icon_telephone" type="tel" name="mobile" class="validate">
+									<label for="icon_telephone">Telephone</label>
 								</div>
 							</div>
 							<div class="row">
@@ -198,8 +199,7 @@
 									<button type="submit" class="btn red darken-4"
 										class="btn waves-effect waves-red waves-ripple btn-small:hover"
 										id='submit' name="signup">Submit-Form</button>
-									<br>
-									<br>
+									<br> <br>
 								</div>
 							</div>
 

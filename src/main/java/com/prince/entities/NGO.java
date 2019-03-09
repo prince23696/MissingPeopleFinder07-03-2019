@@ -16,6 +16,8 @@ public class NGO {
 			private String dor;
 			private String trusty;
 			private String area;
+			private String Acc_status="Activate";
+			
 			public String getEmail() {
 				return email;
 			}
@@ -71,7 +73,15 @@ public class NGO {
 			public void setArea(String area) {
 				this.area = area;
 			}
-			
+			public String getAcc_status() {
+				return Acc_status;
+			}
+
+			public void setAcc_status(String acc_status) {
+				Acc_status = acc_status;
+			}
+
+
 			public NGO(String email, String password, String name,
 					String address, String mobile, String regi_no, String dor,
 					String trusty, String area) {
@@ -86,6 +96,21 @@ public class NGO {
 				this.trusty = trusty;
 				this.area = area;
 			}
+			public NGO(String email, String password, String name,
+					String address, String mobile, String regi_no, String dor,
+					String trusty, String area, String acc_status) {
+				super();
+				this.email = email;
+				this.password = password;
+				this.name = name;
+				this.address = address;
+				this.mobile = mobile;
+				this.regi_no = regi_no;
+				this.dor = dor;
+				this.trusty = trusty;
+				this.area = area;
+				Acc_status = acc_status;
+			}
 			public NGO(String email) {
 				super();
 				this.email = email;
@@ -99,7 +124,7 @@ public class NGO {
 						+ ", name=" + name + ", address=" + address
 						+ ", mobile=" + mobile + ", regi_no=" + regi_no
 						+ ", dor=" + dor + ", trusty=" + trusty + ", area="
-						+ area + "]";
+						+ area + ", Acc_status=" + Acc_status + "]";
 			}
 			
 			

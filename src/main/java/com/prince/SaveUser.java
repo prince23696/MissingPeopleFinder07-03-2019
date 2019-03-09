@@ -28,20 +28,7 @@ public class SaveUser extends HttpServlet {
 		ud.addUser(u);
 		
 		//response
-		PrintWriter out=response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>");
-		out.println("Missing-People-Finder");
-		out.println("</title>");
-		out.println("<head>");
-		out.println("<body>");
-		out.println("<h2>Account Created Successfully</h2>");
-		out.println("</body>");
-		out.println("</html>");
-		out.println("<hr>");
-		out.println("<a href=index.jsp> Home</a>");
-		out.println("<a href=registration.jsp>Register-More!!!-Click Here.</a>");
+	response.sendRedirect("");
 
 	}
 

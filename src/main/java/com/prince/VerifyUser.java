@@ -18,7 +18,7 @@ public class VerifyUser extends HttpServlet {
 		String username = request.getParameter("userid");
 		String password = request.getParameter("password");
 		String type = request.getParameter("utype");
-			
+		
 		if (type.equals("User")) {
 
 			UserDAO dao=new UserDAO();
@@ -37,7 +37,11 @@ public class VerifyUser extends HttpServlet {
 			
 		
 			else{
-				out.println("Invalid Account");
+			String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
+			HttpSession session1=request.getSession();
+			session1.setAttribute("error", s);
+			response.sendRedirect("Login.jsp?error"+s);
+				
 			}
 		}
 			
@@ -58,7 +62,11 @@ public class VerifyUser extends HttpServlet {
 				}
 
 				else {
-					out.println("Invalid Account");
+					String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
+					HttpSession session1=request.getSession();
+					session1.setAttribute("error", s);
+					response.sendRedirect("Login.jsp");
+					
 				}
 			}
 		else if (type.equals("NGO")) {
@@ -78,8 +86,11 @@ public class VerifyUser extends HttpServlet {
 			}
 
 			else {
-				out.println("Invalid Account");
-			}
+				String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
+				HttpSession session1=request.getSession();
+				session1.setAttribute("error", s);
+				response.sendRedirect("Login.jsp");
+					}
 		}
 		else if (type.equals("Admin")) {
 
@@ -96,12 +107,18 @@ public class VerifyUser extends HttpServlet {
 			}
 
 			else {
-				out.println("Invalid Account");
-			}
+				String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
+				HttpSession session1=request.getSession();
+				session1.setAttribute("error", s);
+				response.sendRedirect("Login.jsp");
+				}
 		}
 		 else {
-			out.println("Invalid Account");
-		}
+			 String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
+				HttpSession session1=request.getSession();
+				session1.setAttribute("error", s);
+				response.sendRedirect("Login.jsp");
+				}
 	}
 
 	}

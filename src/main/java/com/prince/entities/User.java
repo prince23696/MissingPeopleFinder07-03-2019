@@ -13,6 +13,7 @@ public class User {
 		private String mobile;
 		private String dob;
 		private String gender;
+		private String Acc_status="Activate";
 	
 		
 		public String getEmail() {
@@ -61,6 +62,15 @@ public class User {
 			this.gender = gender;
 		}
 		
+		public String getAcc_status() {
+			return Acc_status;
+		}
+
+		public void setAcc_status(String acc_status) {
+			Acc_status = acc_status;
+		}
+
+		
 		public User(String email, String password, String name, String address,
 				String mobile, String dob, String gender) {
 			super();
@@ -71,6 +81,19 @@ public class User {
 			this.mobile = mobile;
 			this.dob = dob;
 			this.gender = gender;
+		}
+
+		public User(String email, String password, String name, String address,
+				String mobile, String dob, String gender, String acc_status) {
+			super();
+			this.email = email;
+			this.password = password;
+			this.name = name;
+			this.address = address;
+			this.mobile = mobile;
+			this.dob = dob;
+			this.gender = gender;
+			Acc_status = acc_status;
 		}
 
 		public User(String email) {
@@ -86,8 +109,10 @@ public class User {
 		public String toString() {
 			return "User [email=" + email + ", password=" + password
 					+ ", name=" + name + ", address=" + address + ", mobile="
-					+ mobile + ", dob=" + dob + ", gender=" + gender + "]";
+					+ mobile + ", dob=" + dob + ", gender=" + gender
+					+ ", Acc_status=" + Acc_status + "]";
 		}
+
 				
 		
 		

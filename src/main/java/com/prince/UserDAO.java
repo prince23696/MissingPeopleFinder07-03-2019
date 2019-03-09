@@ -28,14 +28,6 @@ public class UserDAO {
 		tr.commit();
 		session.close();
 	}
-	//fetching all Users
-	public List<User> getAllFriends(){
-		Session session=sf.openSession();
-		Query query=session.createQuery("from Friend");
-		List<User> flist=query.list();
-		return flist;
-
-	}
 	//searching User by name
 	public List<User> searchByUsername(String username){
 		Session session=sf.openSession();
@@ -53,6 +45,16 @@ public class UserDAO {
 		session.close();
 		return ud;
 	}
-
-	
+	//fetching all User
+	public List<User> getAllUser(){
+		Session session=sf.openSession();
+		Query query=session.createQuery("from user");
+		List<User> flist=query.list();
+		
+/*		Criteria cr=session.createCriteria(Friend.class);
+		List<Friend> flist=cr.list();
+*/		session.close();
+		return flist;
+		
+	}
 }

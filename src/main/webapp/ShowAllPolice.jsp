@@ -1,10 +1,4 @@
-
-<%
-	String username = (String) session.getAttribute("user");
-	if (username == null) {
-		response.sendRedirect("index.jsp");
-	}
-%>
+<%@page import="com.prince.entities.Police,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Login-Page | Missing-People-Finder</title>
@@ -79,39 +73,87 @@
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5>
 			<h5 class="header center">Admin-DashBoard</h5>
-			<br> 
-			
+
 		</div>
-		<br>
-		<div class="row">
-	
-			<a href="ShowAllUser.jsp"
-				class="waves-effect waves-light btn-large red ">Show All User</a>
-	     
-			<a href="ShowAllPolice.jsp"
-				class="waves-effect waves-light btn-large red">Show All Police</a>
-        
-			<a href="ShowAllNGO"
-				class="waves-effect waves-light btn-large red">Show All NGO</a>
-				</div>
-				
-				<div class = "row">
-				
-	 	<a href="MissingRegister.jsp"
-				class="waves-effect waves-light btn-large red ">Show All Missing Person</a>
-			<a href="AccountActivation"
-				class="waves-effect waves-light btn-large red ">Show Feedback</a>
-			<a href="ShowAllAccount"
-				class="waves-effect waves-light btn-large red ">Activate An Account</a>
-				</div>
-			
-			<a href="ShowAllAccount"
-				class="waves-effect waves-light btn-large red ">Terminate An Account</a>
-			
 	</div>
+	<br>
+	<%
+		//UserDAO dao = new UserDAO();
+		//List<User> flist=dao.getAllUser();
 
+		Session session1=Data.getSF().openSession();
+		//fetching using QBC
+		Criteria cr = session1.createCriteria(Police.class);
+		List<Police> flist = cr.list();
+	%>
 
+	<table class="highlight" >
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Date_of_Birth</th>
+			<th>Mobile</th>
+			<th>Acc_status</th>
+			<th>Address</th>
+			<th>Gender</th>
+			<th>Police Id</th>
+			<th>Station No.</th>
+			<th>Area</th>
+			<th>Delete One</th>
+			<th>Delete Multiple</th>
+		</tr>
+		<%
+			for (Police f : flist) {
 
+				String name = f.getName();
+				String email = f.getEmail();
+				String password = f.getPassword();
+				String Dob = f.getDob();
+				String mobile = f.getMobile();
+				String acc_status = f.getAcc_status();
+				String address = f.getAddress();
+				String gender = f.getGender();
+				String police_id=f.getPolice_id();
+				String station_no=f.getStation_no();
+				String area=f.getArea();
+				
+		%>
+		<tr>
+			<td><%=name%></td>
+			<td><%=email%>
+			<td><%=password%>
+			<td><%=Dob%>
+			<td><%=mobile%>
+			<td><%=acc_status%>
+			<td><%=address%>
+			<td><%=gender%>
+			<td><%=police_id%>
+			<td><%=station_no%>
+			<td><%=area%>
+			<td><a href=RemoveFriend?id= <%=email%>>[X]</a></td>
+			<td><label> <input type="checkbox" name=id
+					value=<%=email%> /> <span></span>
+			</label></td>
+		</tr>
+		<%
+			}
+		%>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type=submit value=X></td>
+		</tr>
+	</table>
 </body>
 </html>
-

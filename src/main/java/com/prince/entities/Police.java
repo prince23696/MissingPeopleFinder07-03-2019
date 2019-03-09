@@ -17,6 +17,8 @@ public class Police {
 			private String police_id;
 			private String station_no;
 			private String area;
+			private String Acc_status="Activate";
+			
 			public String getEmail() {
 				return email;
 			}
@@ -75,7 +77,15 @@ public class Police {
 			public String getDob() {
 				return dob;
 			}
-			
+			public String getAcc_status() {
+				return Acc_status;
+			}
+
+			public void setAcc_status(String acc_status) {
+				Acc_status = acc_status;
+			}
+
+				
 			public Police(String email, String password, String name,
 					String address, String mobile, String gender, String dob,
 					String police_id, String station_no, String area) {
@@ -90,6 +100,23 @@ public class Police {
 				this.police_id = police_id;
 				this.station_no = station_no;
 				this.area = area;
+			}
+			public Police(String email, String password, String name,
+					String address, String mobile, String gender, String dob,
+					String police_id, String station_no, String area,
+					String acc_status) {
+				super();
+				this.email = email;
+				this.password = password;
+				this.name = name;
+				this.address = address;
+				this.mobile = mobile;
+				this.gender = gender;
+				this.dob = dob;
+				this.police_id = police_id;
+				this.station_no = station_no;
+				this.area = area;
+				Acc_status = acc_status;
 			}
 			public void setDob(String dob) {
 				this.dob = dob;
@@ -107,8 +134,9 @@ public class Police {
 						+ ", name=" + name + ", address=" + address
 						+ ", mobile=" + mobile + ", gender=" + gender
 						+ ", dob=" + dob + ", police_id=" + police_id
-						+ ", station_no=" + station_no + ", area=" + area + "]";
+						+ ", station_no=" + station_no + ", area=" + area
+						+ ", Acc_status=" + Acc_status + "]";
 			}
-		
+			
 			
 }

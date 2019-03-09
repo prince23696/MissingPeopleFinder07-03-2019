@@ -1,5 +1,8 @@
 package com.prince;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -30,5 +33,16 @@ public class NGODAO {
 		session.close();
 		return ud;
 	}
-
+	//fetching all NGO
+	public List<NGO> getAllNGO(){
+		Session session=sf.openSession();
+		Query query=session.createQuery("from ngo");
+		List<NGO> flist=query.list();
+		
+/*		Criteria cr=session.createCriteria(NGO.class);
+		List<Friend> flist=cr.list();
+*/		session.close();
+		return flist;
+		
+	}
 }

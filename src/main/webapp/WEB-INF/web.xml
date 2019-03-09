@@ -82,6 +82,36 @@
   	<description></description>
   	<servlet-class>com.prince.SaveMissingPerson</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>prince</servlet-name>
+  	<display-name>prince</display-name>
+  	<description></description>
+  	<servlet-class>ShowUser.prince</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowAllUsers</servlet-name>
+  	<display-name>ShowAllUsers</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.ShowAllUsers</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowAllNGO</servlet-name>
+  	<display-name>ShowAllNGO</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.ShowAllNGO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowAllPolice</servlet-name>
+  	<display-name>ShowAllPolice</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.ShowAllPolice</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowAllAdmin</servlet-name>
+  	<display-name>ShowAllAdmin</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.ShowAllAdmin</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
   	<url-pattern>/SaveUser</url-pattern>
@@ -133,6 +163,26 @@
   <servlet-mapping>
   	<servlet-name>SaveMissingPerson</servlet-name>
   	<url-pattern>/SaveMissingPerson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>prince</servlet-name>
+  	<url-pattern>/prince</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowAllUsers</servlet-name>
+  	<url-pattern>/ShowAllUsers</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowAllNGO</servlet-name>
+  	<url-pattern>/ShowAllNGO</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowAllPolice</servlet-name>
+  	<url-pattern>/ShowAllPolice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowAllAdmin</servlet-name>
+  	<url-pattern>/ShowAllAdmin</url-pattern>
   </servlet-mapping>
  
   

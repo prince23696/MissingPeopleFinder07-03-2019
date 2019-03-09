@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<%
+String error = (String) session.getAttribute("error");
+if (error != null) {
+	%>
+	<h4><%=error%></h4>
+	<% 
+	}
+
+%>
 <html>
 <head>
 <title>Login-Page | Missing-People-Finder</title>
@@ -82,23 +90,25 @@
 
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
-								<input name="userid" type="text" class="validate" id="userid"
-									required> <label for="userid">E-Mail</label> <span
-									class="helper-text" data-error="Enter Email Address"></span>
+								<i class="material-icons prefix">account_circle</i> <input
+									name="userid" type="text" class="validate" id="userid" required>
+								<label for="userid">E-Mail</label> <span class="helper-text"
+									data-error="Enter Email Address"></span>
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
-								<input name="password" type="password" id="password"
-									maxlength="20" minlength="8" class="validate" required>
-								<label for="password">Password</label> <span class="helper-text"
-									data-error="Enter Password"></span>
+								<i class="material-icons prefix">lock</i> <input name="password"
+									type="password" id="password" maxlength="20" minlength="8"
+									class="validate" required> <label for="password">Password</label>
+								<span class="helper-text" data-error="Enter Password"></span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
-								<select name="utype">
+								<i class="material-icons prefix">recent_actors</i> <select
+									name="utype">
 									<option value="" disabled selected>Choose your option</option>
 									<option>Admin</option>
 									<option>User</option>

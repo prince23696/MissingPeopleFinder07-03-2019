@@ -1,4 +1,4 @@
-
+<%@page import="com.prince.entities.User,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Login-Page | Missing-People-Finder</title>
@@ -44,7 +44,7 @@
 
 					<li><a href="ContactUs.jsp">Contact us</a></li>
 					<li><a href="AboutUs.jsp">About us</a>
-					<li><a href="Login.jsp">Login</a></li>
+					<li><a href="Logout">Logout</a></li>
 					<li><a class="dropdown-trigger" href="#!"
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
@@ -67,40 +67,80 @@
 		<li class="divider"></li>
 		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
 	</ul>
-	<div class="container" class="row">
-		<div class="card">
-
-			<div class="container" class="row">
-				<form action="GenerateOTP">
-					<div class="row">
-
-						<div align="Center">
-							<br>
-							<h4 styleclass="header center">RESET YOUR PASSWORD HERE!!!</h4>
-							<br>
-						</div>
-
-						<div class="row">
-							<div class="input-field col s10 offset-s1"><i class="material-icons prefix">account_circle</i>
-								<input name="userid" type="text" class="validate" id="userid"
-									required> <label for="userid">E-Mail</label> <span
-									class="helper-text" data-error="Enter Email Address"></span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s4 offset-s1" onclick="check()">
-								<button type="submit" class="btn red darken-4"
-									class="btn waves-effect waves-red waves-ripple btn-large:hover"
-									id='submit'>Get OTP</button>
-								<br> <BR>
-							</div>
-						</div>
-					</div>
-				</form>
-
-			</div>
+	<div class="container">
+		<div class="card " style="margin: -15px;:">
+			<br>
+			<h5 class="header center">We Are Here To Help You Finding And
+				Helping For Missing Person</h5>
+			<h5 class="header center">Admin-DashBoard</h5>
 
 		</div>
 	</div>
+	<br>
+	<%
+		//UserDAO dao = new UserDAO();
+		//List<User> flist=dao.getAllUser();
+
+		Session session1=Data.getSF().openSession();
+		//fetching using QBC
+		Criteria cr = session1.createCriteria(User.class);
+		List<User> flist = cr.list();
+	%>
+
+	<table class="highlight" >
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Date_of_Birth</th>
+			<th>Mobile</th>
+			<th>Acc_status</th>
+			<th>Address</th>
+			<th>Gender</th>
+			<th>Delete One</th>
+			<th>Delete Multiple</th>
+		</tr>
+		<%
+			for (User f : flist) {
+
+				String name = f.getName();
+				String email = f.getEmail();
+				String password = f.getPassword();
+				String Dob = f.getDob();
+				String mobile = f.getMobile();
+				String acc_status = f.getAcc_status();
+				String address = f.getAddress();
+				String gender = f.getGender();
+		%>
+		<tr>
+			<td><%=name%></td>
+			<td><%=email%>
+			<td><%=password%>
+			<td><%=Dob%>
+			<td><%=mobile%>
+			<td><%=acc_status%>
+			<td><%=address%>
+			<td><%=gender%>
+			<td><a href=RemoveFriend?id= <%=email%>>[X]</a></td>
+			<td><label> <input type="checkbox" name=id
+					value=<%=email%> /> <span></span>
+			</label></td>
+		</tr>
+		<%
+			}
+		%>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type=submit value=X></td>
+		</tr>
+	</table>
 </body>
 </html>

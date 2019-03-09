@@ -15,6 +15,5 @@
         <mapping class="com.prince.entities.NGO"/>
         <mapping class="com.prince.entities.Police"/>
        
-        
-    </session-factory>
+         </session-factory>
 </hibernate-configuration>
