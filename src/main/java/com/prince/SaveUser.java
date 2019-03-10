@@ -28,7 +28,8 @@ public class SaveUser extends HttpServlet {
 		ud.addUser(u);
 		
 		//response
-	response.sendRedirect("");
+	response.sendRedirect("Display.jsp");
+
 
 	}
 

@@ -7,7 +7,7 @@
 %>
 <html>
 <head>
-<title>Login-Page | Missing-People-Finder</title>
+<title>Admin-DashBoard | Missing People Finder</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
@@ -79,35 +79,25 @@
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5>
 			<h5 class="header center">Admin-DashBoard</h5>
-			<br> 
-			
+			<br>
+
 		</div>
 		<br>
 		<div class="row">
-	
-			<a href="ShowAllUser.jsp"
-				class="waves-effect waves-light btn-large red ">Show All User</a>
-	     
-			<a href="ShowAllPolice.jsp"
-				class="waves-effect waves-light btn-large red">Show All Police</a>
-        
-			<a href="ShowAllNGO"
-				class="waves-effect waves-light btn-large red">Show All NGO</a>
-				</div>
-				
-				<div class = "row">
-				
-	 	<a href="MissingRegister.jsp"
-				class="waves-effect waves-light btn-large red ">Show All Missing Person</a>
-			<a href="AccountActivation"
-				class="waves-effect waves-light btn-large red ">Show Feedback</a>
-			<a href="ShowAllAccount"
-				class="waves-effect waves-light btn-large red ">Activate An Account</a>
-				</div>
-			
-			<a href="ShowAllAccount"
-				class="waves-effect waves-light btn-large red ">Terminate An Account</a>
-			
+
+			<a href="ShowAllUser.jsp" class="waves-effect waves-light btn-large red ">Show All User</a>
+			<a href="ShowAllPolice.jsp" class="waves-effect waves-light btn-large red">Show All Police</a>
+			 <a	href="ShowAllNGO.jsp" class="waves-effect waves-light btn-large red">Show All NGO</a>
+		</div>
+		<div class="row">
+			<a href="" class="waves-effect waves-light btn-large red ">Show All Missing Person</a>
+			 <a href="ShowAllContact.jsp" class="waves-effect waves-light btn-large red ">Show Feedback</a>
+			  <a href="" class="waves-effect waves-light btn-large red ">Activate An Account</a>
+		</div>
+		<div class="row">
+		<a href="" class="waves-effect waves-light btn-large red ">Terminate An Account</a>
+		</div>
+
 	</div>
 
 

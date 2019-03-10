@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About-Us | Missing-People-Finder</title>
+<title>About-Us | Missing People Finder</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">

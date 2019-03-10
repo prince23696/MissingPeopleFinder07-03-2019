@@ -37,10 +37,8 @@ public class VerifyUser extends HttpServlet {
 			
 		
 			else{
-			String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
-			HttpSession session1=request.getSession();
-			session1.setAttribute("error", s);
-			response.sendRedirect("Login.jsp?error"+s);
+			
+			response.sendRedirect("Login.jsp");
 				
 			}
 		}
@@ -62,9 +60,7 @@ public class VerifyUser extends HttpServlet {
 				}
 
 				else {
-					String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
-					HttpSession session1=request.getSession();
-					session1.setAttribute("error", s);
+					
 					response.sendRedirect("Login.jsp");
 					
 				}
@@ -86,9 +82,7 @@ public class VerifyUser extends HttpServlet {
 			}
 
 			else {
-				String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
-				HttpSession session1=request.getSession();
-				session1.setAttribute("error", s);
+			
 				response.sendRedirect("Login.jsp");
 					}
 		}
@@ -107,16 +101,12 @@ public class VerifyUser extends HttpServlet {
 			}
 
 			else {
-				String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
-				HttpSession session1=request.getSession();
-				session1.setAttribute("error", s);
+				
 				response.sendRedirect("Login.jsp");
 				}
 		}
 		 else {
-			 String s="USER ID OR PASSWORD IS INCORRECT ENTER AGAIN!!!";
-				HttpSession session1=request.getSession();
-				session1.setAttribute("error", s);
+			
 				response.sendRedirect("Login.jsp");
 				}
 	}

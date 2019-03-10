@@ -1,15 +1,6 @@
-<%
-String error = (String) session.getAttribute("error");
-if (error != null) {
-	%>
-	<h4><%=error%></h4>
-	<% 
-	}
-
-%>
 <html>
 <head>
-<title>Login-Page | Missing-People-Finder</title>
+<title>Login-Page | Missing People Finder</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">

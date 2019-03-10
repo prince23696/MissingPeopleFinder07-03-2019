@@ -1,7 +1,7 @@
 <%@page import="com.prince.entities.User,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
-<title>Login-Page | Missing-People-Finder</title>
+<title>Missing People Finder</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
@@ -78,15 +78,13 @@
 	</div>
 	<br>
 	<%
-		//UserDAO dao = new UserDAO();
-		//List<User> flist=dao.getAllUser();
-
 		Session session1=Data.getSF().openSession();
 		//fetching using QBC
 		Criteria cr = session1.createCriteria(User.class);
 		List<User> flist = cr.list();
 	%>
-
+	<h4 align="center">User Table</h4>
+	<form action="RemoveAllUser">
 	<table class="highlight" >
 		<tr>
 			<th>Name</th>
@@ -121,7 +119,7 @@
 			<td><%=acc_status%>
 			<td><%=address%>
 			<td><%=gender%>
-			<td><a href=RemoveFriend?id= <%=email%>>[X]</a></td>
+			<td><a href=RemoveUser?id= <%=email%>>[X]</a></td>
 			<td><label> <input type="checkbox" name=id
 					value=<%=email%> /> <span></span>
 			</label></td>
@@ -142,5 +140,6 @@
 			<td><input type=submit value=X></td>
 		</tr>
 	</table>
+	</form>
 </body>
 </html>

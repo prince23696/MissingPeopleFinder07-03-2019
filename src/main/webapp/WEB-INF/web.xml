@@ -112,6 +112,12 @@
   	<description></description>
   	<servlet-class>com.prince.ShowAllAdmin</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SaveContact</servlet-name>
+  	<display-name>SaveContact</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.SaveContact</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
   	<url-pattern>/SaveUser</url-pattern>
@@ -183,6 +189,10 @@
   <servlet-mapping>
   	<servlet-name>ShowAllAdmin</servlet-name>
   	<url-pattern>/ShowAllAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveContact</servlet-name>
+  	<url-pattern>/SaveContact</url-pattern>
   </servlet-mapping>
  
   

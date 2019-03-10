@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+<title>Contact-Us | Missing People Finder</title>
 <!-- Compiled and minified CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
@@ -17,10 +17,6 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		var elems = document.querySelectorAll('.dropdown-trigger');
 		var instances = M.Dropdown.init(elems);
-	});
-	document.addEventListener('DOMContentLoaded', function() {
-		var elems = document.querySelectorAll('select');
-		var instances = M.FormSelect.init(elems);
 	});
 </script>
 
@@ -77,19 +73,19 @@
 
 					<h5 class="header center">Mail Us At XYZ@GMAIL.COM</h5>
 				</div>
-				<h5 class="header center">OR</h5> 
+				<h5 class="header center">OR</h5>
 				<div class="row">
 					<h5 class="header center">DROP YOUR MESSAGE HERE!!!</h5>
 					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix">account_circle</i> <input
 							id="icon_prefix" name="name" type="text" class="validate"
-							required> <label for="icon_prefix">Name</label><span
+							required> <label for="name">Name</label><span
 							class="helper-text" data-error="Enter Name"></span>
 					</div>
 					<div class="row">
 						<div class="input-field col s10 offset-s1">
 							<i class="material-icons prefix">contact_mail</i> <input
-								name="email" type="email" class="validate" id="email" required>
+								name="email" type="text" class="validate" id="email" required>
 							<label for="email">E-Mail</label> <span class="helper-text"
 								data-error="Enter Email Address"></span>
 						</div>
@@ -98,8 +94,8 @@
 						<div class="input-field col s10 offset-s1">
 							<i class="material-icons prefix">message</i> <input
 								name="message" type="text" class="validate" id="message"
-								required> <label for="message">Message</label> <span
-								class="helper-text" data-error="Enter Message "></span>
+								required> <label for="message">Message (MAX 250
+								CHARECTER)</label> <span class="helper-text" data-error="Enter Message "></span>
 						</div>
 
 						<div class="row">
@@ -116,16 +112,6 @@
 
 				</div>
 	</form>
-	<!-- 	<footer id="footer" class="midnight-blue">
-			<div class="container">
-				<div class="row">
-					<div class="col-s8 offset-s1">
-						© Copyright 2019 MissingPeopleFinder.com All Rights	Reserved
-					</div>
 
-				</div>
-			</div>
-		</footer>
-		<!--/#footer-->
 </body>
 </html>
