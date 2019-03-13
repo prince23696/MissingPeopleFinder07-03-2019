@@ -120,26 +120,26 @@
 							</div>
 							<div class="row">
 								<div class="col s11">
-					Date_Of_Birth : <input type="date" name="dob">
+									Date_Of_Birth : <input type="date" name="dob">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col s12">
 									<div class="input-field col s2">
-										<p>Gender</p>
+										<i class="material-icons prefix">wc</i> <label for="gender">Gender</label>
 									</div>
 
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="male"
-												type="radio"  /> <span>Male</span>
+												type="radio" /> <span>Male</span>
 											</label>
 										</p>
 									</div>
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="female"
-												type="radio"  /> <span>Female</span>
+												type="radio" /> <span>Female</span>
 											</label>
 										</p>
 									</div>
@@ -148,8 +148,8 @@
 							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input
-										id="icon_telephone" type="tel"name="mobile" class="validate"> <label
-										for="icon_telephone">Telephone</label>
+										id="icon_telephone" type="tel" name="mobile" class="validate">
+									<label for="icon_telephone">Telephone</label>
 								</div>
 							</div>
 							<div class="row">
@@ -170,25 +170,16 @@
 										Password</label>
 								</div>
 							</div>
-
-
 							<div class="row">
-
 								<div class="col s5 offset-s1" onclick="check()">
 									<button type="submit" class="btn red darken-4"
 										class="btn waves-effect waves-red waves-ripple btn-small:hover"
 										id='submit' name="signup">Sign Up</button>
-									<br>
-									<br>
+									<br> <br>
 								</div>
 							</div>
-
-
-
 						</div>
 				</form>
-
-
 			</div>
 		</div>
 	</div>

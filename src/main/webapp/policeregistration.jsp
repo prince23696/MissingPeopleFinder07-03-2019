@@ -145,8 +145,8 @@
 							</div>
 							<div class="row">
 								<div class="col s12">
-									<div class="input-field col s2">
-										<p>Gender</p>
+									<div class="input-field col s2"><i class="material-icons prefix">wc</i>
+										<label for="gender">Gender</label>
 									</div>
 
 									<div class="input-field col s5">

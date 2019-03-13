@@ -1,4 +1,4 @@
-<%@page import="com.prince.entities.NGO,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page import="com.prince.entities.User,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -78,60 +78,67 @@
 	</div>
 	<br>
 	<%
-		
 		Session session1=Data.getSF().openSession();
 		//fetching using QBC
-		Criteria cr = session1.createCriteria(NGO.class);
-		List<NGO> flist = cr.list();
+		Criteria cr = session1.createCriteria(User.class);
+		List<User> flist = cr.list();
 	%>
-	<h4 align="center">NGO Table</h4>
-	<form action="RemoveAllNGO">
+	<h4 align="center">User Table</h4>
+	<form action="RemoveAllUser">
 	<table class="highlight" >
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
 			<th>Password</th>
-			<th>Date_of_Registration</th>
-			<th>Registration No.</th>
+			<th>Date_of_Birth</th>
 			<th>Mobile</th>
 			<th>Acc_status</th>
 			<th>Address</th>
-			<th>Trusty</th>
-			<th>Area</th>
+			<th>Gender</th>
+			<th>Delete One</th>
+			<th>Delete Multiple</th>
 		</tr>
 		<%
-			for (NGO f : flist) {
+			for (User f : flist) {
 
 				String name = f.getName();
 				String email = f.getEmail();
 				String password = f.getPassword();
-				String Dor = f.getDor();
-				String regi_no=f.getRegi_no();
+				String Dob = f.getDob();
 				String mobile = f.getMobile();
 				String acc_status = f.getAcc_status();
 				String address = f.getAddress();
-				String trusty=f.getTrusty();
-				String area=f.getArea();
-				
-				
+				String gender = f.getGender();
 		%>
 		<tr>
 			<td><%=name%></td>
 			<td><%=email%>
 			<td><%=password%>
-			<td><%=Dor%>
-			<td><%=regi_no%>
+			<td><%=Dob%>
 			<td><%=mobile%>
 			<td><%=acc_status%>
 			<td><%=address%>
-			<td><%=trusty%>
-			<td><%=area%>
+			<td><%=gender%>
+			<td><a href="RemoveUser?id= <%=email%>">[X]</a></td>
+			<td><label> <input type="checkbox" name=id
+					value=<%=email%> /> <span></span>
 			</label></td>
 		</tr>
 		<%
 			}
 		%>
-		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type=submit value=X></td>
+		</tr>
 	</table>
 	</form>
 </body>

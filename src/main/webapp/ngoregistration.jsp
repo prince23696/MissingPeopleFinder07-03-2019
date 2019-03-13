@@ -143,28 +143,7 @@
 					Date_Of_Registration : <input type="date" name="dor">
 								</div>
 							</div>
-							<div class="row">
-								<div class="col s12">
-									<div class="input-field col s2">
-										<p>Gender</p>
-									</div>
 
-									<div class="input-field col s5">
-										<p>
-											<label> <input name="gender" value="male"
-												type="radio"  /> <span>Male</span>
-											</label>
-										</p>
-									</div>
-									<div class="input-field col s5">
-										<p>
-											<label> <input name="gender" value="female"
-												type="radio"  /> <span>Female</span>
-											</label>
-										</p>
-									</div>
-								</div>
-							</div>
 							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input

@@ -47,4 +47,13 @@ public class PoliceDAO {
 			return flist;
 			
 		}
+		// remove Police
+		public void removeById(String id){
+			Session session=sf.openSession();
+			Transaction tr=session.beginTransaction();
+			Police n=new Police(); n.setEmail(id);
+			session.delete(n);
+			tr.commit();
+			session.close();
+		}
 }

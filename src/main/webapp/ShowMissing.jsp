@@ -1,4 +1,4 @@
-<%@page import="com.prince.entities.NGO,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -23,8 +23,6 @@
 		var instances = M.FormSelect.init(elems);
 	});
 </script>
-
-
 </head>
 <body bgcolor="#eeeeee">
 	<p style="margin-top: 1em">
@@ -33,8 +31,6 @@
 
 		</font>
 	</p>
-
-
 	<nav>
 		<div class="nav-wrapper  " style="background-color: teal">
 			<div class="container">
@@ -52,14 +48,11 @@
 					<li><a href="Help.jsp">Help!!</a></li>
 
 				</ul>
-
-
 			</div>
 		</div>
 	</nav>
 	<br>
 	<br>
-
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -78,61 +71,47 @@
 	</div>
 	<br>
 	<%
-		
 		Session session1=Data.getSF().openSession();
 		//fetching using QBC
-		Criteria cr = session1.createCriteria(NGO.class);
-		List<NGO> flist = cr.list();
+		Criteria cr = session1.createCriteria(MissingPerson.class);
+		List<MissingPerson> flist = cr.list();
 	%>
-	<h4 align="center">NGO Table</h4>
-	<form action="RemoveAllNGO">
+	<h4 align="center">Missing Table</h4>
+	<form>
 	<table class="highlight" >
 		<tr>
 			<th>Name</th>
-			<th>Email</th>
-			<th>Password</th>
-			<th>Date_of_Registration</th>
-			<th>Registration No.</th>
+			<th>Date_of_Birth</th>
+			<th>Gender</th>
+			<th>Image</th>
 			<th>Mobile</th>
-			<th>Acc_status</th>
-			<th>Address</th>
-			<th>Trusty</th>
-			<th>Area</th>
+			<th>Status</th>
+			<th>More Details!</th>						
 		</tr>
 		<%
-			for (NGO f : flist) {
+			for (MissingPerson f : flist) {
 
+				String id = f.getId();
 				String name = f.getName();
-				String email = f.getEmail();
-				String password = f.getPassword();
-				String Dor = f.getDor();
-				String regi_no=f.getRegi_no();
-				String mobile = f.getMobile();
-				String acc_status = f.getAcc_status();
-				String address = f.getAddress();
-				String trusty=f.getTrusty();
-				String area=f.getArea();
-				
-				
+				String Dob = f.getDob();
+				String gender = f.getGender();
+				String status = f.getStatus();
+				String image = f.getImage();
+				String mobile = f.getMobile();	
 		%>
 		<tr>
 			<td><%=name%></td>
-			<td><%=email%>
-			<td><%=password%>
-			<td><%=Dor%>
-			<td><%=regi_no%>
+			<td><%=Dob%>
+			<td><%=gender%>
+			<td><%=image%>
 			<td><%=mobile%>
-			<td><%=acc_status%>
-			<td><%=address%>
-			<td><%=trusty%>
-			<td><%=area%>
-			</label></td>
+			<td><%=status%>
+			<td><a href=ShowDetails?id= <%=id%>>[Click Here!]</a></td>
 		</tr>
 		<%
 			}
 		%>
-		
-	</table>
+		</table>
 	</form>
 </body>
 </html>

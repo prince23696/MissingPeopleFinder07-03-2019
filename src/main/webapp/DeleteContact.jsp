@@ -1,4 +1,5 @@
-<%@page import="com.prince.entities.NGO,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page
+	import="com.prince.entities.Contact,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -78,61 +79,48 @@
 	</div>
 	<br>
 	<%
-		
-		Session session1=Data.getSF().openSession();
+		Session session1 = Data.getSF().openSession();
 		//fetching using QBC
-		Criteria cr = session1.createCriteria(NGO.class);
-		List<NGO> flist = cr.list();
+		Criteria cr = session1.createCriteria(Contact.class);
+		List<Contact> flist = cr.list();
 	%>
-	<h4 align="center">NGO Table</h4>
-	<form action="RemoveAllNGO">
-	<table class="highlight" >
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Password</th>
-			<th>Date_of_Registration</th>
-			<th>Registration No.</th>
-			<th>Mobile</th>
-			<th>Acc_status</th>
-			<th>Address</th>
-			<th>Trusty</th>
-			<th>Area</th>
-		</tr>
-		<%
-			for (NGO f : flist) {
+	<h4 align="center">FeedBack Table</h4>
+	<form action="RemoveAllContact">
+		<table class="highlight">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Message</th>
+				<th>Delete One</th>
+				<th>Delete Multiple</th>
+			</tr>
+			<%
+				for (Contact f : flist) {
 
-				String name = f.getName();
-				String email = f.getEmail();
-				String password = f.getPassword();
-				String Dor = f.getDor();
-				String regi_no=f.getRegi_no();
-				String mobile = f.getMobile();
-				String acc_status = f.getAcc_status();
-				String address = f.getAddress();
-				String trusty=f.getTrusty();
-				String area=f.getArea();
-				
-				
-		%>
-		<tr>
-			<td><%=name%></td>
-			<td><%=email%>
-			<td><%=password%>
-			<td><%=Dor%>
-			<td><%=regi_no%>
-			<td><%=mobile%>
-			<td><%=acc_status%>
-			<td><%=address%>
-			<td><%=trusty%>
-			<td><%=area%>
-			</label></td>
-		</tr>
-		<%
-			}
-		%>
-		
-	</table>
+					String name = f.getName();
+					String email = f.getEmail();
+					String password = f.getMessage();
+			%>
+			<tr>
+				<td><%=name%></td>
+				<td><%=email%>
+				<td><%=password%>
+				<td><a href="RemoveContact?id= <%=email%>">[X]</a></td>
+				<td><label> <input type="checkbox" name=id
+						value=<%=email%> /> <span></span>
+				</label></td>
+			</tr>
+			<%
+				}
+			%>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><input type=submit value=X></td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>

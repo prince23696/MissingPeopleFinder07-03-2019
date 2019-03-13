@@ -32,6 +32,7 @@ public class VerifyUser extends HttpServlet {
 						// step-2 (store the data to session)
 						session.setAttribute("user", username);
 						session.setAttribute("password",password );
+						session.setAttribute("utype",type );
 						response.sendRedirect("UserDashboard.jsp");
 					}
 			
@@ -56,6 +57,7 @@ public class VerifyUser extends HttpServlet {
 				// step-2 (store the data to session)
 				session.setAttribute("user", username);
 				session.setAttribute("password",password );
+				session.setAttribute("utype",type );
 				response.sendRedirect("PoliceDashboard.jsp");
 				}
 
@@ -78,6 +80,7 @@ public class VerifyUser extends HttpServlet {
 				// step-2 (store the data to session)
 				session.setAttribute("user", username);
 				session.setAttribute("password",password );
+				session.setAttribute("utype",type );
 				response.sendRedirect("NGODashboard.jsp");
 			}
 
@@ -97,6 +100,7 @@ public class VerifyUser extends HttpServlet {
 				// step-2 (store the data to session)
 				session.setAttribute("user", username);
 				session.setAttribute("password",password );
+				session.setAttribute("utype",type );
 				response.sendRedirect("AdminDashboard.jsp");
 			}
 

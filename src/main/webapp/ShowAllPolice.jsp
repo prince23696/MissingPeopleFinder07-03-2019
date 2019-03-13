@@ -99,8 +99,6 @@
 				<th>Police Id</th>
 				<th>Station No.</th>
 				<th>Area</th>
-				<th>Delete One</th>
-				<th>Delete Multiple</th>
 			</tr>
 			<%
 				for (Police f : flist) {
@@ -129,29 +127,11 @@
 				<td><%=police_id%>
 				<td><%=station_no%>
 				<td><%=area%>
-				<td><a href=RemovePolice?id= <%=email%>>[X]</a></td>
-				<td><label> <input type="checkbox" name=id
-						value=<%=email%> /> <span></span>
 				</label></td>
 			</tr>
 			<%
 				}
 			%>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><input type=submit value=X></td>
-			</tr>
 		</table>
 	</form>
 </body>

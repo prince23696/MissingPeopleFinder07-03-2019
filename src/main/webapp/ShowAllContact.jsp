@@ -91,8 +91,6 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Message</th>
-				<th>Delete One</th>
-				<th>Delete Multiple</th>
 			</tr>
 			<%
 				for (Contact f : flist) {
@@ -105,21 +103,11 @@
 				<td><%=name%></td>
 				<td><%=email%>
 				<td><%=password%>
-				<td><a href=RemoveContact?id= <%=email%>>[X]</a></td>
-				<td><label> <input type="checkbox" name=id
-						value=<%=email%> /> <span></span>
 				</label></td>
 			</tr>
 			<%
 				}
 			%>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><input type=submit value=X></td>
-			</tr>
 		</table>
 	</form>
 </body>

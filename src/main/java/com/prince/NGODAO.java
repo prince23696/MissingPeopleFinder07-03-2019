@@ -8,7 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.prince.entities.NGO;
-import com.prince.entities.User;
 
 public class NGODAO {
 
@@ -37,12 +36,22 @@ public class NGODAO {
 	public List<NGO> getAllNGO(){
 		Session session=sf.openSession();
 		Query query=session.createQuery("from ngo");
-		List<NGO> flist=query.list();
-		
+		List<NGO> flist=query.list();		
 /*		Criteria cr=session.createCriteria(NGO.class);
 		List<Friend> flist=cr.list();
 */		session.close();
 		return flist;
 		
 	}
+	//remove a NGO
+	public void removeById(String id){
+		Session session=sf.openSession();
+		Transaction tr=session.beginTransaction();
+		NGO n=new NGO(); n.setEmail(id);
+		session.delete(n);
+		tr.commit();
+		session.close();
+	}
+	
+
 }

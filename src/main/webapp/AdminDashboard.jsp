@@ -29,22 +29,16 @@
 		var instances = M.FormSelect.init(elems);
 	});
 </script>
-
-
 </head>
 <body bgcolor="#eeeeee">
 	<p style="margin-top: 1em">
 		<font size="5" face="sans-serif"> <marquee>Welcome to
 				the Portal to Find Missing People</marquee>
-
 		</font>
 	</p>
-
-
 	<nav>
 		<div class="nav-wrapper  " style="background-color: teal">
 			<div class="container">
-
 				<a href="index.jsp" class="brand-logo"> Home</a>
 				<ul class="right hide-on-med-and-down" id="nav-mobile">
 
@@ -54,18 +48,13 @@
 					<li><a class="dropdown-trigger" href="#!"
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
-
 					<li><a href="Help.jsp">Help!!</a></li>
-
 				</ul>
-
-
 			</div>
 		</div>
 	</nav>
 	<br>
 	<br>
-
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -82,26 +71,32 @@
 			<br>
 
 		</div>
-		<br>
-		<div class="row">
+	</div>
+	<br>
+	<div class="row" align="center">
 
-			<a href="ShowAllUser.jsp" class="waves-effect waves-light btn-large red ">Show All User</a>
-			<a href="ShowAllPolice.jsp" class="waves-effect waves-light btn-large red">Show All Police</a>
-			 <a	href="ShowAllNGO.jsp" class="waves-effect waves-light btn-large red">Show All NGO</a>
-		</div>
-		<div class="row">
-			<a href="" class="waves-effect waves-light btn-large red ">Show All Missing Person</a>
-			 <a href="ShowAllContact.jsp" class="waves-effect waves-light btn-large red ">Show Feedback</a>
-			  <a href="" class="waves-effect waves-light btn-large red ">Activate An Account</a>
-		</div>
-		<div class="row">
-		<a href="" class="waves-effect waves-light btn-large red ">Terminate An Account</a>
-		</div>
-
+		  <a href="ShowAllUser.jsp" class="waves-effect waves-light btn-large red ">Show All User</a>
+		  <a href="ShowAllPolice.jsp" class="waves-effect waves-light btn-large red">Show All Police</a>
+		  <a href="ShowAllNGO.jsp" class="waves-effect waves-light btn-large red">Show All NGO</a>
+		  <a href="ShowMissing.jsp" class="waves-effect waves-light btn-large red ">Show All Missing Person</a>
 	</div>
 
+	<div class="row" align="center">
+		<a href="ShowAllContact.jsp"
+			class="waves-effect waves-light btn-large red ">Show Feedback</a> <a
+			href="TerminateUser.jsp"
+			class="waves-effect waves-light btn-large red ">Terminate User</a> <a
+			href="TerminatePolice.jsp"
+			class="waves-effect waves-light btn-large red ">Terminate Police</a>
+		<a href="TerminateNGO.jsp"
+			class="waves-effect waves-light btn-large red ">Terminate NGO</a>
 
+	</div>
+	<div class="row" align="center">
+		<a href="DeleteContact.jsp"
+			class="waves-effect waves-light btn-large red ">Delete Feedback</a>
 
+	</div>
 </body>
 </html>
 

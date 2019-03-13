@@ -95,8 +95,6 @@
 			<th>Acc_status</th>
 			<th>Address</th>
 			<th>Gender</th>
-			<th>Delete One</th>
-			<th>Delete Multiple</th>
 		</tr>
 		<%
 			for (User f : flist) {
@@ -119,27 +117,12 @@
 			<td><%=acc_status%>
 			<td><%=address%>
 			<td><%=gender%>
-			<td><a href=RemoveUser?id= <%=email%>>[X]</a></td>
-			<td><label> <input type="checkbox" name=id
-					value=<%=email%> /> <span></span>
 			</label></td>
 		</tr>
 		<%
 			}
 		%>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><input type=submit value=X></td>
-		</tr>
-	</table>
+		</table>
 	</form>
 </body>
 </html>

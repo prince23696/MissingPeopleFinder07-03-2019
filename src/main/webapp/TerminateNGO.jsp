@@ -98,6 +98,8 @@
 			<th>Address</th>
 			<th>Trusty</th>
 			<th>Area</th>
+			<th>Delete One</th>
+			<th>Delete Multiple</th>
 		</tr>
 		<%
 			for (NGO f : flist) {
@@ -126,12 +128,28 @@
 			<td><%=address%>
 			<td><%=trusty%>
 			<td><%=area%>
+			<td><a href="RemoveNGO?id=<%=email%>">[X]</a></td>
+			<td><label> <input type="checkbox" name=id
+					value=<%=email%> /> <span></span>
 			</label></td>
 		</tr>
 		<%
 			}
 		%>
-		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type=submit value=X></td>
+		</tr>
 	</table>
 	</form>
 </body>

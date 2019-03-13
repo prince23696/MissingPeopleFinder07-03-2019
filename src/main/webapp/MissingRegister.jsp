@@ -70,8 +70,6 @@
 					<li><a href="Help.jsp">Help!!</a></li>
 
 				</ul>
-
-
 			</div>
 		</div>
 	</nav>
@@ -85,10 +83,10 @@
 		<li class="divider"></li>
 		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
 	</ul>
-	<div class="container">
+-	<div class="container">
 		<div class="card">
 			<div class="container" class="row">
-				<form action="SavePolice">
+				<form action="SaveMissingPerson">
 					<div class="row">
 						<br>
 						<div align="Center">
@@ -98,46 +96,7 @@
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
 								<i class="material-icons prefix">account_circle</i> <input
-									id="icon_prefix" name="name" type="text" class="validate">
-								<label for="icon_prefix">Name</label>
-							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">contact_mail</i> <input
-										name="email" type="email" class="validate" id="email" required>
-									<label for="email">E-Mail</label> <span class="helper-text"
-										data-error="Enter Email Address"></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">import_contacts</i> <input
-										name="police_id" type="text" class="validate" id="police_id"
-										required> <label for="police_id">Police Id</label> <span
-										class="helper-text" data-error="Enter Police Id"></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">home</i> <input
-										name="station_no" type="text" class="validate" id="station_no"
-										required> <label for="station_no">Station No.</label>
-									<span class="helper-text" data-error="Enter Station No."></span>
-								</div>
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">home</i> <input name="Area"
-										type="text" class="validate" id="Area" required> <label
-										for="Area">Area</label> <span class="helper-text"
-										data-error="Enter Area"></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">room</i> <input name="address"
-										type="text" class="validate" id="address" required> <label
-										for="address">Address</label> <span class="helper-text"
-										data-error="Enter address"></span>
-								</div>
+									id="name" name="name" type="text"> <label for="name">Name</label>
 							</div>
 							<div class="row">
 								<div class="col s11">
@@ -147,7 +106,7 @@
 							<div class="row">
 								<div class="col s12">
 									<div class="input-field col s2">
-										<p>Gender</p>
+										<i class="material-icons prefix">wc</i> <label for="gender">Gender</label>
 									</div>
 
 									<div class="input-field col s5">
@@ -167,45 +126,145 @@
 								</div>
 							</div>
 							<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">person</i> <select name="status">
+									<option disabled selected>Status :</option>
+									<option>Missing</option>
+									<option>Found</option>
+									<option>In-Process</option>
+								</select><label>Status</label>
+							</div>
+						</div>
+							<div class="row">
+								<div class="input-field col s10 offset-s1">
+									<i class="material-icons prefix">contact_mail</i> <input
+										name="area" type="text" id="area"> <label for="area">Area</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s10 offset-s1">
+									<i class="material-icons prefix">room</i> <input name="address"
+										type="text" id="address"> <label for="address">Address</label>
+								</div>
+							</div>
+							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input
-										id="icon_telephone" type="tel" name="mobile" class="validate">
+										id="icon_telephone" type="tel" name="mobile">
 									<label for="icon_telephone">Telephone</label>
 								</div>
 							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">lock</i> <input
-										name="password" type="password" id="password" maxlength="20"
-										minlength="8" class="validate" required> <label
-										for="password">Password</label> <span class="helper-text"
-										data-error="Enter Password"></span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">lock_outline</i> <input
-										name="cpassword" type="password" id="confirm_password"
-										maxlength="20" minlength="8" class="validate" onblur="check()"
-										required> <label for="confirm_password">Confirm
-										Password</label>
-								</div>
-							</div>
-
-
-							<div class="row">
-
-								<div class="col s5 offset-s1" onclick="check()">
-									<button type="submit" class="btn red darken-4"
-										class="btn waves-effect waves-red waves-ripple btn-small:hover"
-										id='submit' name="signup">Submit-Form</button>
-									<br> <br>
-								</div>
-							</div>
-
-
-
 						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">recent_actors</i> <select
+									name="complextion">
+									<option disabled selected>Choose Complextion :</option>
+									<option>Sallow</option>
+									<option>Black</option>
+									<option>Wheatish</option>
+									<option>Fair</option>
+									<option>Not Available</option>
+								</select><label>Complextion</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">face</i> <select name="hair">
+									<option disabled selected>Hair :</option>
+									<option>Normal</option>
+									<option>Bald Partial</option>
+									<option>Curly</option>
+									<option>Long</option>
+									<option>Short</option>
+									<option>Medium</option>
+									<option>Bald Full</option>
+									<option>Small</option>
+									<option>Not Available</option>
+								</select><label>Hair</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">fingerprint</i> <select
+									name="identi_mark">
+									<option disabled selected>Identification Mark :</option>
+									<option>Handicap</option>
+									<option>Leucoderma</option>
+									<option>Mole</option>
+									<option>Scare</option>
+									<option>Tattoo</option>
+									<option>Deformities</option>
+									<option>Other Skin Disease</option>
+									<option>Burn Mark</option>
+									<option>Other Disease</option>
+									<option>Other</option>
+									<option>Not Available</option>
+								</select><label>Identification Mark</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">person</i> <select name="build">
+									<option disabled selected>Build :</option>
+									<option>Fat</option>
+									<option>Thin</option>
+									<option>Medium</option>
+									<option>Stocky</option>
+									<option>Not Available</option>
+								</select><label>Build</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">directions_walk</i> <input
+									id="height" type="text" name="height">
+								<label for="height">Height</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">accessibility_new</i> <input
+									id="outfit" type="text" name="outfit">
+								<label for="outfit">Outfit</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">visibility</i> <input
+									id="last_seen" type="text" name="last_seen">
+								<label for="last_seen">Last Seen</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">assignment</i> <input
+									id="extra" type="text" name="extra"> <label
+									for="extra">Extra Information</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">import_contacts</i> <input
+									name="image" type="file" class="validate" id="image" required>
+								<label for="image">Upload File</label> <span class="helper-text"
+									data-error="Select File to Upload"></span>
+							</div>
+						</div>
+
+						<div class="row">
+
+							<div class="col s5 offset-s1"  onclick="check()">
+								<button type="submit" class="btn red darken-4"
+									class="btn waves-effect waves-red waves-ripple btn-small:hover"
+									id='submit' name="signup">Submit-Form</button>
+								<br> <br>
+							</div>
+						</div>
+
+
+
+					</div>
 				</form>
 
 

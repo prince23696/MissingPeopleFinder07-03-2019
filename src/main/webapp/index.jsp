@@ -16,6 +16,10 @@
 		var elems = document.querySelectorAll('.dropdown-trigger');
 		var instances = M.Dropdown.init(elems);
 	});
+	 document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('.slider');
+		    var instances = M.Slider.init(elems);
+		  });
 </script>
 </head>
 <body bgcolor="#eeeeee">
@@ -59,10 +63,42 @@
 				Helping For Missing Person</h5>
 			<br>
 		</div>
-		<br> <br> <a
+		<br> <br> <a href="MissingRegister.jsp"
 			class="waves-effect waves-light btn-large red right">I WANT TO
 			FIND SOME ONE</a> <a class="waves-effect waves-light btn-large red left">I
 			WANT TO HELP</a>
 	</div>
+	<br>
+	<br>
+	<br>
+	<div class="slider" style="height:500px;">
+		<ul class="slides">
+			<li><img src="images/1.jpg">
+				<div class="caption center-align">
+					<h3>This is our big Tagline!</h3>
+					<h5 class="light grey-text text-lighten-3">Here's our small
+						slogan.</h5>
+				</div></li>
+			<li><img src="images/2.jpg">
+				<div class="caption center-align">
+					<h3>Left Aligned Caption</h3>
+					<h5 class="light grey-text text-lighten-3">Here's our small
+						slogan.</h5>
+				</div></li>
+			<li><img src="3.jpg" /> <!-- random image -->
+				<div class="caption right-align">
+					<h3>Right Aligned Caption</h3>
+					<h5 class="light grey-text text-lighten-3">Here's our small
+						slogan.</h5>
+				</div></li>
+			<li><img src="https://lorempixel.com/580/250/nature/4">
+				<div class="caption center-align">
+					<h3>This is our big Tagline!</h3>
+					<h5 class="light grey-text text-lighten-3">Here's our small
+						slogan.</h5>
+				</div></li>
+		</ul>
+	</div>
+
 </body>
 </html>

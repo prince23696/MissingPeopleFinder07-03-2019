@@ -83,12 +83,6 @@
   	<servlet-class>com.prince.SaveMissingPerson</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>prince</servlet-name>
-  	<display-name>prince</display-name>
-  	<description></description>
-  	<servlet-class>ShowUser.prince</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>ShowAllUsers</servlet-name>
   	<display-name>ShowAllUsers</display-name>
   	<description></description>
@@ -117,6 +111,24 @@
   	<display-name>SaveContact</display-name>
   	<description></description>
   	<servlet-class>com.prince.SaveContact</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveNGO</servlet-name>
+  	<display-name>RemoveNGO</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveNGO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveAllNGO</servlet-name>
+  	<display-name>RemoveAllNGO</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveAllNGO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveAllPolice</servlet-name>
+  	<display-name>RemoveAllPolice</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveAllPolice</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
@@ -171,10 +183,6 @@
   	<url-pattern>/SaveMissingPerson</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>prince</servlet-name>
-  	<url-pattern>/prince</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>ShowAllUsers</servlet-name>
   	<url-pattern>/ShowAllUsers</url-pattern>
   </servlet-mapping>
@@ -187,12 +195,20 @@
   	<url-pattern>/ShowAllPolice</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>ShowAllAdmin</servlet-name>
-  	<url-pattern>/ShowAllAdmin</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>SaveContact</servlet-name>
   	<url-pattern>/SaveContact</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveNGO</servlet-name>
+  	<url-pattern>/RemoveNGO</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveAllNGO</servlet-name>
+  	<url-pattern>/RemoveAllNGO</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveAllPolice</servlet-name>
+  	<url-pattern>/RemoveAllPolice</url-pattern>
   </servlet-mapping>
  
   

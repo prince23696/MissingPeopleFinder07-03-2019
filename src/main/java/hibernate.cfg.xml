@@ -15,6 +15,6 @@
         <mapping class="com.prince.entities.NGO"/>
         <mapping class="com.prince.entities.Police"/>
         <mapping class="com.prince.entities.Contact"/>
-       
+       <mapping class="com.prince.entities.MissingPerson"/>
          </session-factory>
 </hibernate-configuration>
