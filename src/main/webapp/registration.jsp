@@ -99,7 +99,7 @@
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
 								<i class="material-icons prefix">account_circle</i> <input
-									id="icon_prefix" name="name" type="text" class="validate">
+									id="icon_prefix" name="name" type="text" class="validate"  required>
 								<label for="icon_prefix">Name</label>
 							</div>
 							<div class="row">
@@ -132,14 +132,14 @@
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="male"
-												type="radio" /> <span>Male</span>
+												type="radio" /required> <span>Male</span>
 											</label>
 										</p>
 									</div>
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="female"
-												type="radio" /> <span>Female</span>
+												type="radio" required/> <span>Female</span>
 											</label>
 										</p>
 									</div>
@@ -148,7 +148,7 @@
 							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input
-										id="icon_telephone" type="tel" name="mobile" class="validate">
+										id="icon_telephone" type="tel" name="mobile" class="validate" required>
 									<label for="icon_telephone">Telephone</label>
 								</div>
 							</div>

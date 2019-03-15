@@ -1,4 +1,5 @@
-<%@page import="com.prince.entities.User,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page
+	import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.criterion.Restrictions,org.hibernate.Session,java.util.List,org.hibernate.Criteria,org.hibernate.criterion.Criterion"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -52,11 +53,14 @@
 					<li><a href="Help.jsp">Help!!</a></li>
 
 				</ul>
+
+
 			</div>
 		</div>
 	</nav>
 	<br>
 	<br>
+
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -68,75 +72,59 @@
 		<div class="card " style="margin: -15px;:">
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
-				Helping For Missing Person</h5>
-			<h5 class="header center">Admin-DashBoard</h5>
-			<a href="AdminDashboard.jsp">Go to Dashboard</a>
+				Helping For Missing Person<br><br></h5>
+			
 		</div>
 	</div>
 	<br>
 	<%
-		Session session1=Data.getSF().openSession();
+		String name = request.getParameter("name");
+		MissingDAO dao = new MissingDAO();
+		Session session2 = Data.getSF().openSession(); 
 		//fetching using QBC
-		Criteria cr = session1.createCriteria(User.class);
-		List<User> flist = cr.list();
+		Criteria cr = session2.createCriteria(MissingPerson.class);
+		Criterion crt = Restrictions.eq("name", name);
+		cr.add(crt);
+		List<MissingPerson> flist = cr.list();
 	%>
-	<h4 align="center">User Table</h4>
-	<form action="RemoveAllUser">
-	<table class="highlight" >
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Password</th>
-			<th>Date_of_Birth</th>
-			<th>Mobile</th>
-			<th>Acc_status</th>
-			<th>Address</th>
-			<th>Gender</th>
-			<th>Delete One</th>
-			<th>Delete Multiple</th>
-		</tr>
-		<%
-			for (User f : flist) {
+	<h4 align="center">Missing Table</h4>
+	<form>
+		<table class="highlight">
+			<tr>
+				<th>Unique Id</th>
+				<th>Name</th>
+				<th>Date_of_Birth</th>
+				<th>Gender</th>
+				<th>Image</th>
+				<th>Mobile</th>
+				<th>Status</th>
+				<th>More Details!</th>
+			</tr>
+			<%
+				for (MissingPerson f : flist) {
 
-				String name = f.getName();
-				String email = f.getEmail();
-				String password = f.getPassword();
-				String Dob = f.getDob();
-				String mobile = f.getMobile();
-				String acc_status = f.getAcc_status();
-				String address = f.getAddress();
-				String gender = f.getGender();
-		%>
-		<tr>
-			<td><%=name%></td>
-			<td><%=email%>
-			<td><%=password%>
-			<td><%=Dob%>
-			<td><%=mobile%>
-			<td><%=acc_status%>
-			<td><%=address%>
-			<td><%=gender%>
-			<td><a href="RemoveUser?id=<%=email%>">[X]</a></td>
-			<td><label> <input type="checkbox" name=id
-					value=<%=email%> /> <span></span>
-			</label></td>
-		</tr>
-		<%
-			}
-		%>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><input type=submit value=X></td>
-		</tr>
-	</table>
+				    String id = f.getId();
+					String name1 = f.getName();
+					String Dob = f.getDob();
+					String gender = f.getGender();
+					String status = f.getStatus();
+					String image = f.getImage();
+					String mobile = f.getMobile();
+			%>
+			<tr>
+				<td><%=id %></td>
+				<td><%=name1%></td>
+				<td><%=Dob%>
+				<td><%=gender%>
+				<td><%=image%>
+				<td><%=mobile%>
+				<td><%=status%>
+				<td><a href="ShowDetails.jsp?id=<%=id%>">[Click Here!]</a></td>
+			</tr>
+			<%
+				}
+			%>
+		</table>
 	</form>
 </body>
 </html>

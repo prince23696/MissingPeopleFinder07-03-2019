@@ -74,7 +74,8 @@
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5>
 			<h5 class="header center">Admin-DashBoard</h5>
-
+				<a href="AdminDashboard.jsp">Go to Dashboard</a>
+			
 		</div>
 	</div>
 	<br>
@@ -85,7 +86,7 @@
 		List<Contact> flist = cr.list();
 	%>
 	<h4 align="center">FeedBack Table</h4>
-	<form action="RemoveAllContact">
+	<form action="RemoveAllFeedback">
 		<table class="highlight">
 			<tr>
 				<th>Name</th>
@@ -105,7 +106,7 @@
 				<td><%=name%></td>
 				<td><%=email%>
 				<td><%=password%>
-				<td><a href="RemoveContact?id= <%=email%>">[X]</a></td>
+				<td><a href="RemoveFeedback?id=<%=email%>">[X]</a></td>
 				<td><label> <input type="checkbox" name=id
 						value=<%=email%> /> <span></span>
 				</label></td>

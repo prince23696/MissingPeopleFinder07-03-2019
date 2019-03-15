@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.prince.entities.Contact;
+import com.prince.entities.NGO;
 
 public class ContactDAO {
 
@@ -47,4 +48,13 @@ public class ContactDAO {
 		return flist;
 
 	}
+	//remove a feedback
+		public void removeById(String id){
+			Session session=sf.openSession();
+			Transaction tr=session.beginTransaction();
+			Contact n=new Contact(); n.setEmail(id);
+			session.delete(n);
+			tr.commit();
+			session.close();
+		}
 }

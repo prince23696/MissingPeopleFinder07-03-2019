@@ -1,4 +1,5 @@
-<%@page import="com.prince.entities.User,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page
+	import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -44,7 +45,7 @@
 
 					<li><a href="ContactUs.jsp">Contact us</a></li>
 					<li><a href="AboutUs.jsp">About us</a>
-					<li><a href="Logout">Logout</a></li>
+					<li><a href="Login.jsp">Login</a></li>
 					<li><a class="dropdown-trigger" href="#!"
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
@@ -52,11 +53,14 @@
 					<li><a href="Help.jsp">Help!!</a></li>
 
 				</ul>
+
+
 			</div>
 		</div>
 	</nav>
 	<br>
 	<br>
+
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -68,75 +72,103 @@
 		<div class="card " style="margin: -15px;:">
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
-				Helping For Missing Person</h5>
-			<h5 class="header center">Admin-DashBoard</h5>
-			<a href="AdminDashboard.jsp">Go to Dashboard</a>
+				Helping For Missing Person</h5><br>
+
 		</div>
 	</div>
 	<br>
 	<%
-		Session session1=Data.getSF().openSession();
-		//fetching using QBC
-		Criteria cr = session1.createCriteria(User.class);
-		List<User> flist = cr.list();
+		String id = request.getParameter("id");
+		Session session1 = Data.getSF().openSession();
+		MissingPerson mp = session1.get(MissingPerson.class,id);
 	%>
-	<h4 align="center">User Table</h4>
-	<form action="RemoveAllUser">
-	<table class="highlight" >
+	<h4 align="center">Missing People</h4>
+	<%
+		String Id = mp.getId();
+		String Name = mp.getName();
+		String Dob = mp.getDob();
+		String Gender = mp.getGender();
+		String Area = mp.getArea();
+		String Address = mp.getAddress();
+		String Telephone = mp.getMobile();
+		String complextion = mp.getComplextion();
+		String Hair = mp.getHair();
+		String Identi_mark = mp.getIdenti_mark();
+		String Build = mp.getBuild();
+		String Height = mp.getHeight();
+		String Outfit = mp.getOutfit();
+		String Last_seen = mp.getLastseen();
+		String Extra = mp.getExtra();
+		String Image = mp.getImage();
+	%>
+	<div class="container">
+	<div class="card">
+	<table class="highlight">
 		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Password</th>
-			<th>Date_of_Birth</th>
-			<th>Mobile</th>
-			<th>Acc_status</th>
-			<th>Address</th>
-			<th>Gender</th>
-			<th>Delete One</th>
-			<th>Delete Multiple</th>
+			<td>Unique Id :</td>
+			<td><%=id %></td>
+		</tr>	
+		<tr>
+			<td>Name :</td>
+			<td><%=Name%></td>
 		</tr>
-		<%
-			for (User f : flist) {
-
-				String name = f.getName();
-				String email = f.getEmail();
-				String password = f.getPassword();
-				String Dob = f.getDob();
-				String mobile = f.getMobile();
-				String acc_status = f.getAcc_status();
-				String address = f.getAddress();
-				String gender = f.getGender();
-		%>
 		<tr>
-			<td><%=name%></td>
-			<td><%=email%>
-			<td><%=password%>
-			<td><%=Dob%>
-			<td><%=mobile%>
-			<td><%=acc_status%>
-			<td><%=address%>
-			<td><%=gender%>
-			<td><a href="RemoveUser?id=<%=email%>">[X]</a></td>
-			<td><label> <input type="checkbox" name=id
-					value=<%=email%> /> <span></span>
-			</label></td>
+			<td>Dob :</td>
+			<td><%=Dob%></td>
 		</tr>
-		<%
-			}
-		%>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><input type=submit value=X></td>
+			<td>Gender :</td>
+			<td><%=Gender%></td>
+		</tr>
+		<tr>
+			<td>Area :</td>
+			<td><%=Area%></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><%=Address%></td>
+		</tr>
+		<tr>
+			<td>Telephone :</td>
+			<td><%=Telephone%></td>
+		</tr>
+		<tr>
+			<td>Complextion :</td>
+			<td><%=complextion%></td>
+		</tr>
+		<tr>
+			<td>Hair :</td>
+			<td><%=Hair%></td>
+		</tr>
+		<tr>
+			<td>Identi_mark :</td>
+			<td><%=Identi_mark%></td>
+		</tr>
+		<tr>
+			<td>Build :</td>
+			<td><%=Build%></td>
+		</tr>
+		<tr>
+			<td>Height:</td>
+			<td><%=Height%></td>
+		</tr>
+		<tr>
+			<td>Outfit :</td>
+			<td><%=Outfit%></td>
+		</tr>
+		<tr>
+			<td>Lastseen :</td>
+			<td><%=Last_seen%></td>
+		</tr>
+		<tr>
+			<td>Extra :</td>
+			<td><%=Extra%></td>
+		</tr>
+		<tr>
+			<td>Image :</td>
+			<td><%=Image%></td>
 		</tr>
 	</table>
-	</form>
+	</div></div>
 </body>
 </html>

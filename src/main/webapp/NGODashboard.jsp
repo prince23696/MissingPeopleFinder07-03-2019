@@ -78,7 +78,12 @@
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5><h5  class="header center">NGO-DashBoard</h5>
-			<br> <a href="SearchByName.jsp"
+			<br> 
+			
+			
+			
+			
+			<a href="SearchByName.jsp"
 				class="waves-effect waves-light btn-large red right">Search-Missing-People</a>
 			<a href="MissingRegister.jsp"
 				class="waves-effect waves-light btn-large red left">Report-Missing-People</a>

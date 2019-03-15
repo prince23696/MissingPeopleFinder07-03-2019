@@ -8,7 +8,6 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="home.css">
-
 <!-- Compiled and minified JavaScript -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -64,9 +63,7 @@
 		<div class="card " style="margin: -15px;:">
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
-				Helping For Missing Person</h5>
-			<h5 class="header center">Admin-DashBoard</h5>
-
+				Helping For Missing Person</h5><br>
 		</div>
 	</div>
 	<br>
@@ -80,6 +77,7 @@
 	<form>
 	<table class="highlight" >
 		<tr>
+			<th>Unique Id</th>
 			<th>Name</th>
 			<th>Date_of_Birth</th>
 			<th>Gender</th>
@@ -90,7 +88,6 @@
 		</tr>
 		<%
 			for (MissingPerson f : flist) {
-
 				String id = f.getId();
 				String name = f.getName();
 				String Dob = f.getDob();
@@ -100,13 +97,14 @@
 				String mobile = f.getMobile();	
 		%>
 		<tr>
+			<td><%=id %></td>
 			<td><%=name%></td>
 			<td><%=Dob%>
 			<td><%=gender%>
 			<td><%=image%>
 			<td><%=mobile%>
 			<td><%=status%>
-			<td><a href=ShowDetails?id= <%=id%>>[Click Here!]</a></td>
+			<td><a href="ShowDetails.jsp?id=<%=id%>">[Click Here!]</a></td>
 		</tr>
 		<%
 			}

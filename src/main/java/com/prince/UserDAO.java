@@ -10,6 +10,7 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
+import com.prince.entities.NGO;
 import com.prince.entities.User;
 
 public class UserDAO {
@@ -56,5 +57,14 @@ public class UserDAO {
 */		session.close();
 		return flist;
 		
+	}
+	//remove user by id
+	public void removeById(String id){
+		Session session=sf.openSession();
+		Transaction tr=session.beginTransaction();
+		User n=new User(); n.setEmail(id);
+		session.delete(n);
+		tr.commit();
+		session.close();
 	}
 }

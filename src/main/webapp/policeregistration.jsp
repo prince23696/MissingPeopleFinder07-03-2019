@@ -94,11 +94,11 @@
 						<div align="Center">
 
 							<h4 styleclass="header center">Registration Form Police</h4>
-						</div>
+						</div></div>
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
 								<i class="material-icons prefix">account_circle</i> <input
-									id="icon_prefix" name="name" type="text" class="validate">
+									id="icon_prefix" name="name" type="text" class="validate" required>
 								<label for="icon_prefix">Name</label>
 							</div>
 							<div class="row">
@@ -152,14 +152,14 @@
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="male"
-												type="radio"  /> <span>Male</span>
+												type="radio" required/> <span>Male</span>
 											</label>
 										</p>
 									</div>
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="female"
-												type="radio"  /> <span>Female</span>
+												type="radio" required/> <span>Female</span>
 											</label>
 										</p>
 									</div>
@@ -168,7 +168,7 @@
 							<div class="row">
 								<div class="input-field col s10 offset-s1">
 									<i class="material-icons prefix">phone</i> <input
-										id="icon_telephone" type="tel"name="mobile" class="validate"> <label
+										id="icon_telephone" type="tel"name="mobile" class="validate" required> <label
 										for="icon_telephone">Telephone</label>
 								</div>
 							</div>
@@ -190,10 +190,7 @@
 										Password</label>
 								</div>
 							</div>
-
-
 							<div class="row">
-
 								<div class="col s5 offset-s1" onclick="check()">
 									<button type="submit" class="btn red darken-4"
 										class="btn waves-effect waves-red waves-ripple btn-small:hover"
@@ -202,9 +199,6 @@
 									<br>
 								</div>
 							</div>
-
-
-
 						</div>
 				</form>
 

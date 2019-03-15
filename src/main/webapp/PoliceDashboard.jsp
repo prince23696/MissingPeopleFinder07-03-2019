@@ -1,4 +1,3 @@
-
 <%
 	String username = (String) session.getAttribute("user");
 	if (username == null) {
@@ -78,19 +77,27 @@
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5><h5  class="header center">Police-DashBoard</h5>
-			<br> <a href="SearchByName.jsp"
-				class="waves-effect waves-light btn-large red right">Search-Missing-People</a>
-			<a href="MissingRegister.jsp"
-				class="waves-effect waves-light btn-large red left">Report-Missing-People</a>
-			<a href="ShowAllMissingPerson"
-				class="waves-effect waves-light btn-large red right">View-Missing-People</a>
-			<a href="MissingRegister.jsp"
-				class="waves-effect waves-light btn-large red left">Report-Found-Missing-Person</a>
-
+			<br>
+			
 
 		</div>
-	</div>
-
+	</div><br>
+			
+			<div class="row" align="center">
+			 <a href="SearchMissingByName.jsp"
+				class="waves-effect waves-light btn-large red">Search Missing People</a>
+			<a href="MissingRegister.jsp"
+				class="waves-effect waves-light btn-large red">Report Missing People</a>
+			<a href="ShowMissing.jsp"
+				class="waves-effect waves-light btn-large red">View Missing People</a>
+			</div>
+			<div class="row" align="center">
+			<a href="MissingRegister.jsp"
+				class="waves-effect waves-light btn-large red">Report Found Missing Person</a>
+			<a href="UpdateById.jsp"
+				class="waves-effect waves-light btn-large red">Update Missing Report Status</a>
+		
+		</div>
 
 
 </body>

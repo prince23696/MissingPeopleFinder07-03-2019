@@ -130,6 +130,54 @@
   	<description></description>
   	<servlet-class>com.prince.RemoveAllPolice</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>RemovePolice</servlet-name>
+  	<display-name>RemovePolice</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemovePolice</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveUser</servlet-name>
+  	<display-name>RemoveUser</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveAllUser</servlet-name>
+  	<display-name>RemoveAllUser</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveAllUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveFeedback</servlet-name>
+  	<display-name>RemoveFeedback</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveFeedback</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveAllFeedback</servlet-name>
+  	<display-name>RemoveAllFeedback</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveAllFeedback</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowMissingByName</servlet-name>
+  	<display-name>ShowMissingByName</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.ShowMissingByName</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReport</servlet-name>
+  	<display-name>DeleteReport</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.DeleteReport</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveAllReport</servlet-name>
+  	<display-name>RemoveAllReport</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveAllReport</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
   	<url-pattern>/SaveUser</url-pattern>
@@ -209,6 +257,38 @@
   <servlet-mapping>
   	<servlet-name>RemoveAllPolice</servlet-name>
   	<url-pattern>/RemoveAllPolice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemovePolice</servlet-name>
+  	<url-pattern>/RemovePolice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveUser</servlet-name>
+  	<url-pattern>/RemoveUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveAllUser</servlet-name>
+  	<url-pattern>/RemoveAllUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveFeedback</servlet-name>
+  	<url-pattern>/RemoveFeedback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveAllFeedback</servlet-name>
+  	<url-pattern>/RemoveAllFeedback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowMissingByName</servlet-name>
+  	<url-pattern>/ShowMissingByName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReport</servlet-name>
+  	<url-pattern>/DeleteReport</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveAllReport</servlet-name>
+  	<url-pattern>/RemoveAllReport</url-pattern>
   </servlet-mapping>
  
   

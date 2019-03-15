@@ -100,7 +100,7 @@
 							</div>
 							<div class="row">
 								<div class="col s11">
-									Date_Of_Birth : <input type="date" name="dob">
+									<lebel for="dob">Date Of Birth</lebel> <input type="date" name="dob">
 								</div>
 							</div>
 							<div class="row">
@@ -112,14 +112,14 @@
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="male"
-												type="radio" /> <span>Male</span>
+												type="radio" required/> <span>Male</span>
 											</label>
 										</p>
 									</div>
 									<div class="input-field col s5">
 										<p>
 											<label> <input name="gender" value="female"
-												type="radio" /> <span>Female</span>
+												type="radio" required/> <span>Female</span>
 											</label>
 										</p>
 									</div>
@@ -240,7 +240,7 @@
 							<div class="input-field col s10 offset-s1">
 								<i class="material-icons prefix">assignment</i> <input
 									id="extra" type="text" name="extra"> <label
-									for="extra">Extra Information</label>
+									for="extra">Extra Information (MAX 250 CHARECTERS)</label>
 							</div>
 						</div>
 						<div class="row">

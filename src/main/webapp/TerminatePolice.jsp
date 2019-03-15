@@ -74,6 +74,8 @@
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5>
 			<h5 class="header center">Admin-DashBoard</h5>
+				<a href="AdminDashboard.jsp">Go to Dashboard</a>
+			
 
 		</div>
 	</div>

@@ -6,6 +6,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
 import com.prince.entities.MissingPerson;
 
 public class SaveMissingPerson extends HttpServlet {
@@ -31,7 +35,7 @@ public class SaveMissingPerson extends HttpServlet {
 		String extra = request.getParameter("extra");
 		String image = request.getParameter("image");
 		// process the data
-		String a="0";
+		String a="2";
 		MissingPerson mp = new MissingPerson(a,status,name, dob, gender, area, address,
 				mobile, complextion, hair, identity, build, height, outfit,
 				last_seen, extra, image);

@@ -18,7 +18,6 @@ public class MissingDAO {
 	public MissingDAO() {
 		sf = Data.getSF();
 	}
-
 	// adding a new Missing-Report
 	public void addReport(MissingPerson missingperson) {
 		Session session = sf.openSession();
@@ -27,7 +26,6 @@ public class MissingDAO {
 		tr.commit();
 		session.close();
 	}
-
 	// searching Person by id
 	public MissingPerson searchById(String id) {
 		Session session = sf.openSession();
@@ -62,8 +60,8 @@ public class MissingDAO {
 		public void removeById(String id){
 			Session session=sf.openSession();
 			Transaction tr=session.beginTransaction();
-		//	MissingPerson mp=new MissingPerson(); mp.setId(id);
-		//	session.delete(mp);
+			MissingPerson mp=new MissingPerson(); mp.setId(id);
+			session.delete(mp);
 			tr.commit();
 			session.close();
 		}

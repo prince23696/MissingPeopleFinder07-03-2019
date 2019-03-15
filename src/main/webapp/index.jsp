@@ -40,7 +40,6 @@
 					<li><a class="dropdown-trigger" href="#!"
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
-
 					<li><a href="Help.jsp">Help!!</a></li>
 
 				</ul>
@@ -63,40 +62,20 @@
 				Helping For Missing Person</h5>
 			<br>
 		</div>
-		<br> <br> <a href="MissingRegister.jsp"
-			class="waves-effect waves-light btn-large red right">I WANT TO
-			FIND SOME ONE</a> <a class="waves-effect waves-light btn-large red left">I
-			WANT TO HELP</a>
+		<br> <br> 
+		<a href="MissingRegister.jsp" class="waves-effect waves-light btn-large red right">I WANT TO
+			FIND SOME ONE</a>
+	    <a href="ShowMissingHome.jsp" class="waves-effect waves-light btn-large red left">I WANT TO HELP</a>
 	</div>
 	<br>
 	<br>
 	<br>
 	<div class="slider" style="height:500px;">
 		<ul class="slides">
-			<li><img src="images/1.jpg">
-				<div class="caption center-align">
-					<h3>This is our big Tagline!</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
-			<li><img src="images/2.jpg">
-				<div class="caption center-align">
-					<h3>Left Aligned Caption</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
-			<li><img src="3.jpg" /> <!-- random image -->
-				<div class="caption right-align">
-					<h3>Right Aligned Caption</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
-			<li><img src="https://lorempixel.com/580/250/nature/4">
-				<div class="caption center-align">
-					<h3>This is our big Tagline!</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
+			<li><img src="images/missing"></li>
+			<li><img src="images/missing1"></li>
+			<li><img src="images/missing2"/></li>
+			<li><img src="images/missing3"></li>
 		</ul>
 	</div>
 

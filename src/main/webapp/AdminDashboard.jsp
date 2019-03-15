@@ -95,7 +95,9 @@
 	<div class="row" align="center">
 		<a href="DeleteContact.jsp"
 			class="waves-effect waves-light btn-large red ">Delete Feedback</a>
-
+    	<a href="DeleteReport.jsp"
+		class="waves-effect waves-light btn-large red ">Delete Missing Report</a>
+		
 	</div>
 </body>
 </html>
