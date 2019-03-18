@@ -86,7 +86,7 @@
 -	<div class="container">
 		<div class="card">
 			<div class="container" class="row">
-				<form action="SaveMissingPerson">
+				<form action="SaveMissingPerson" method="post" enctype="multipart/form-data">
 					<div class="row">
 						<br>
 						<div align="Center">
@@ -100,7 +100,7 @@
 							</div>
 							<div class="row">
 								<div class="col s11">
-									<lebel for="dob">Date Of Birth</lebel> <input type="date" name="dob">
+-									<label for="dob">Date Of Birth</lebel> <input type="date" name="dob"></label>
 								</div>
 							</div>
 							<div class="row">

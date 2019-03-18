@@ -77,9 +77,6 @@
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
 				Helping For Missing Person</h5><h5  class="header center">Police-DashBoard</h5>
-			<br>
-			
-
 		</div>
 	</div><br>
 			

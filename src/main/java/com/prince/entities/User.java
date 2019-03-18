@@ -1,5 +1,7 @@
 package com.prince.entities;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

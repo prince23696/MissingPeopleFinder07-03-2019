@@ -79,6 +79,7 @@
 	<form action="RemoveAllReport">
 		<table class="highlight">
 			<tr>
+				<th>Unique Id</th>
 				<th>Name</th>
 				<th>Date_of_Birth</th>
 				<th>Gender</th>
@@ -99,6 +100,7 @@
 					String mobile = f.getMobile();
 			%>
 			<tr>
+				<td><%=id %></td>
 				<td><%=name%></td>
 				<td><%=Dob%>
 				<td><%=gender%>
@@ -114,6 +116,7 @@
 				}
 			%>
 			<tr>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>

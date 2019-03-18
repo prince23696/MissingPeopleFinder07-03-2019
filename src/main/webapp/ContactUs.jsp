@@ -19,37 +19,26 @@
 		var instances = M.Dropdown.init(elems);
 	});
 </script>
-
-
 </head>
 <body bgcolor="#eeeeee">
 	<p style="margin-top: 1em">
 		<font size="5" face="sans-serif"> <marquee>Welcome to
 				the Portal to Find Missing People</marquee>
-
 		</font>
 	</p>
-
-
 	<nav>
 		<div class="nav-wrapper  " style="background-color: teal">
 			<div class="container">
-
 				<a href="index.jsp" class="brand-logo"> Home</a>
 				<ul class="right hide-on-med-and-down" id="nav-mobile">
-
 					<li><a href="ContactUs.jsp">Contact us</a></li>
 					<li><a href="AboutUs.jsp">About us</a>
 					<li><a href="Login.jsp">Login</a></li>
 					<li><a class="dropdown-trigger" href="#!"
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
-
 					<li><a href="Help.jsp">Help!!</a></li>
-
 				</ul>
-
-
 			</div>
 		</div>
 	</nav>
@@ -63,9 +52,7 @@
 		<li class="divider"></li>
 		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
 	</ul>
-	<h3>
-		<center>Contact-Us</center>
-	</h3>
+	<h3 align="center">Contact-Us</h3>
 	<form action="SaveContact">
 		<div class="container">
 			<div class="card " style="margin: -15px;:">
@@ -85,7 +72,7 @@
 					<div class="row">
 						<div class="input-field col s10 offset-s1">
 							<i class="material-icons prefix">contact_mail</i> <input
-								name="email" type="text" class="validate" id="email" required>
+								name="email" type="email" class="validate" id="email" required>
 							<label for="email">E-Mail</label> <span class="helper-text"
 								data-error="Enter Email Address"></span>
 						</div>
@@ -97,9 +84,7 @@
 								required> <label for="message">Message (MAX 250
 								CHARECTER)</label> <span class="helper-text" data-error="Enter Message "></span>
 						</div>
-
 						<div class="row">
-
 							<div class="col s5 offset-s1" onclick="check()">
 								<button type="submit" class="btn red darken-4"
 									class="btn waves-effect waves-red waves-ripple btn-small:hover"
@@ -107,11 +92,10 @@
 								<br> <br>
 							</div>
 						</div>
-
 					</div>
-
 				</div>
+			</div>
+		</div>
 	</form>
-
 </body>
 </html>

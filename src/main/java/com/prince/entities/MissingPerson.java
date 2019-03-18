@@ -1,5 +1,7 @@
 package com.prince.entities;
 
+import java.sql.Blob;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -22,7 +24,7 @@ public class MissingPerson {
 	private String outfit;
 	private String lastseen;
 	private String extra;
-	private String image;
+	private Blob image;
 	public String getId() {
 		return id;
 	}
@@ -120,10 +122,10 @@ public class MissingPerson {
 	public void setExtra(String extra) {
 		this.extra = extra;
 	}
-	public String getImage() {
+	public Blob getImage() {
 		return image;
 	}
-	public void setImage(String image) {
+	public void setImage(Blob image) {
 		this.image = image;
 	}
 	
@@ -131,7 +133,7 @@ public class MissingPerson {
 			String gender, String area, String address, String mobile,
 			String complextion, String hair, String identi_mark, String build,
 			String height, String outfit, String lastseen, String extra,
-			String image) {
+			Blob image) {
 		super();
 		this.id = id;
 		this.status = status;
