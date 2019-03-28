@@ -1,5 +1,5 @@
 <%@page
-	import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.criterion.Restrictions,org.hibernate.Session,java.util.List,org.hibernate.Criteria,org.hibernate.criterion.Criterion"%>
+	import="com.prince.entities.MissingPerson,com.prince.*,java.sql.Blob,org.hibernate.criterion.Restrictions,org.hibernate.Session,java.util.List,org.hibernate.Criteria,org.hibernate.criterion.Criterion"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -103,22 +103,22 @@
 			<%
 				for (MissingPerson f : flist) {
 
-				    String id = f.getId();
+				    int id = f.getId();
 					String name1 = f.getName();
 					String Dob = f.getDob();
 					String gender = f.getGender();
 					String status = f.getStatus();
-					String image = f.getImage();
+					Blob image = f.getImage();
 					String mobile = f.getMobile();
 			%>
 			<tr>
 				<td><%=id %></td>
 				<td><%=name1%></td>
-				<td><%=Dob%>
-				<td><%=gender%>
-				<td><%=image%>
-				<td><%=mobile%>
-				<td><%=status%>
+				<td><%=Dob%></td>
+				<td><%=gender%></td>
+				<td><img width="100" height="100"src="ImageLoader?id=<%=id%>" /></td>
+				<td><%=mobile%></td>
+				<td><%=status%></td>
 				<td><a href="ShowDetails.jsp?id=<%=id%>">[Click Here!]</a></td>
 			</tr>
 			<%

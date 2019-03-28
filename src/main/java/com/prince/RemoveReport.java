@@ -12,10 +12,9 @@ public class RemoveReport extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		String id = request.getParameter("id");
+		int id = Integer.parseInt(request.getParameter("id"));
 		MissingDAO dao = new MissingDAO();
 		dao.removeById(id);
-		
 		response.sendRedirect("DeleteReport.jsp");
 	}
 

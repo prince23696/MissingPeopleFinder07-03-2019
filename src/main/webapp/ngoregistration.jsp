@@ -140,7 +140,7 @@
 							</div>
 							<div class="row">
 								<div class="col s11">
-					Date_Of_Registration : <input type="date" name="dor">
+				<label for name="dor">	Date Of Registration </label> <input type="date" name="dor">
 								</div>
 							</div>
 

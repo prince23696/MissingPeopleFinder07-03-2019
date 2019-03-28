@@ -1,5 +1,5 @@
 <%@page
-	import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+	import="com.prince.entities.MissingPerson,com.prince.*,java.sql.Blob,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -91,12 +91,12 @@
 			</tr>
 			<%
 				for (MissingPerson f : flist) {
-					String id = f.getId();
+					int id = f.getId();
 					String name = f.getName();
 					String Dob = f.getDob();
 					String gender = f.getGender();
 					String status = f.getStatus();
-					String image = f.getImage();
+					Blob image = f.getImage();
 					String mobile = f.getMobile();
 			%>
 			<tr>

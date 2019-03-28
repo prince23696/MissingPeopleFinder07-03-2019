@@ -3,12 +3,14 @@ package com.prince.entities;
 import java.sql.Blob;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class MissingPerson {
-	@Id
-	private String id;
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String status;
 	private String name;
 	private String dob;
@@ -25,10 +27,10 @@ public class MissingPerson {
 	private String lastseen;
 	private String extra;
 	private Blob image;
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -129,13 +131,12 @@ public class MissingPerson {
 		this.image = image;
 	}
 	
-	public MissingPerson(String id, String status, String name, String dob,
+	public MissingPerson(String status, String name, String dob,
 			String gender, String area, String address, String mobile,
 			String complextion, String hair, String identi_mark, String build,
 			String height, String outfit, String lastseen, String extra,
 			Blob image) {
 		super();
-		this.id = id;
 		this.status = status;
 		this.name = name;
 		this.dob = dob;
@@ -154,7 +155,7 @@ public class MissingPerson {
 		this.image = image;
 	}
 	
-	public MissingPerson(String id) {
+	public MissingPerson(int id) {
 		super();
 		this.id = id;
 	}

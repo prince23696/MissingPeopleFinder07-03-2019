@@ -10,10 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 public class RemoveAllReport extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		
 		String s[] = request.getParameterValues("id");
+		int[] verify2 = new int[s.length];
+		for(int i=0;i<s.length;i++){
+            verify2[i]=Integer.parseInt(s[i]);
+        }
+
 		MissingDAO dao = new MissingDAO();
-		for (String id : s) {
+		for (int id : verify2) {
 			dao.removeById(id);
 		}
 		response.sendRedirect("DeleteReport.jsp");

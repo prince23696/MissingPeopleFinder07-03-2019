@@ -67,7 +67,7 @@
 	<div class="container">
 		<div class="card">
 			<div class="container" class="row">
-				<form action="UpdateStatusById.jsp">
+				<form action="UpdateMissingEditcontroller">
 					<div class="row">
 						<br>
 						<div align="Center">

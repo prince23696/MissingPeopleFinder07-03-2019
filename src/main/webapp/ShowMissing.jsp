@@ -1,4 +1,5 @@
-<%@page import="com.prince.entities.MissingPerson,com.prince.*,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
+<%@page
+	import="com.prince.entities.MissingPerson,com.prince.*,java.sql.Blob,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <html>
 <head>
 <title>Missing People Finder</title>
@@ -63,52 +64,53 @@
 		<div class="card " style="margin: -15px;:">
 			<br>
 			<h5 class="header center">We Are Here To Help You Finding And
-				Helping For Missing Person</h5><br>
+				Helping For Missing Person</h5>
+			<br>
 		</div>
 	</div>
 	<br>
 	<%
-		Session session1=Data.getSF().openSession();
+		Session session1 = Data.getSF().openSession();
 		//fetching using QBC
 		Criteria cr = session1.createCriteria(MissingPerson.class);
 		List<MissingPerson> flist = cr.list();
 	%>
 	<h4 align="center">Missing Table</h4>
 	<form>
-	<table class="highlight" >
-		<tr>
-			<th>Unique Id</th>
-			<th>Name</th>
-			<th>Date_of_Birth</th>
-			<th>Gender</th>
-			<th>Image</th>
-			<th>Mobile</th>
-			<th>Status</th>
-			<th>More Details!</th>						
-		</tr>
-		<%
-			for (MissingPerson f : flist) {
-				String id = f.getId();
-				String name = f.getName();
-				String Dob = f.getDob();
-				String gender = f.getGender();
-				String status = f.getStatus();
-				String image = f.getImage();
-				String mobile = f.getMobile();	
-		%>
-		<tr>
-			<td><%=id %></td>
-			<td><%=name%></td>
-			<td><%=Dob%>
-			<td><%=gender%>
-			<td><%=image%>
-			<td><%=mobile%>
-			<td><%=status%>
-			<td><a href="ShowDetails.jsp?id=<%=id%>">[Click Here!]</a></td>
-		</tr>
-		<%
-			}
-		%>
+		<table class="highlight">
+			<tr>
+				<th>Unique Id</th>
+				<th>Name</th>
+				<th>Date_of_Birth</th>
+				<th>Gender</th>
+				<th>Image</th>
+				<th>Mobile</th>
+				<th>Status</th>
+				<th>More Details!</th>
+			</tr>
+			<%
+				for (MissingPerson f : flist) {
+					int id = f.getId();
+					String name = f.getName();
+					String Dob = f.getDob();
+					String gender = f.getGender();
+					String status = f.getStatus();
+					Blob image = f.getImage();
+					String mobile = f.getMobile();
+			%>
+			<tr>
+				<td><%=id%></td>
+				<td><%=name%></td>
+				<td><%=Dob%>
+				<td><%=gender%> 
+				<td><img width="100" height="100"src="ImageLoader?id=<%=id%>" /></td>
+				<td><%=mobile%>
+				<td><%=status%>
+				<td><a href="ShowDetails.jsp?id=<%=id%>">[Click Here!]</a></td>
+			</tr>
+			<%
+				}
+			%>
 		</table>
 	</form>
 </body>

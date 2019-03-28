@@ -105,7 +105,7 @@
 									<option>User</option>
 									<option>Police</option>
 									<option>NGO</option>
-								</select> <label>User Type</label> <a href="RecoverPassword.jsp">ForgetPassword??</a>
+								</select> <label>User Type</label> <!-- <a href="RecoverPassword.jsp">ForgetPassword??</a> -->
 							</div>
 						</div>
 						<div class="row">

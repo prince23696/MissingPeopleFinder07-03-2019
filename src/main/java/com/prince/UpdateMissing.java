@@ -1,6 +1,5 @@
 package com.prince;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Blob;
 import java.util.List;
 
@@ -9,16 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.rowset.serial.SerialBlob;
-
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
-
 import com.prince.entities.MissingPerson;
 
-public class SaveMissingPerson extends HttpServlet {
+public class UpdateMissing extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -94,7 +91,7 @@ public class SaveMissingPerson extends HttpServlet {
 				address, mobile, complextion, hair, identity, build, height,
 				outfit, last_seen, extra, b1);
 		MissingDAO md = new MissingDAO();
-		md.addReport(mp);
-		response.sendRedirect("Display.jsp");
+		md.UpdateMissing(mp);
+		response.sendRedirect("showMissing.jsp");
 	}
 }

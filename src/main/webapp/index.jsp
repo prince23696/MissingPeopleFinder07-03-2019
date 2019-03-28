@@ -41,7 +41,6 @@
 						data-target="dropdown1" onclick="instance.onOpenEnd();">Registration<i
 							class="material-icons right">arrow_drop_down</i></a></li>
 					<li><a href="Help.jsp">Help!!</a></li>
-
 				</ul>
 			</div>
 		</div>

@@ -27,14 +27,14 @@ public class MissingDAO {
 		session.close();
 	}
 	// searching Person by id
-	public MissingPerson searchById(String id) {
+	public MissingPerson searchById(int id) {
 		Session session = sf.openSession();
 		MissingPerson mp = session.get(MissingPerson.class,id);
 		session.close();
 		return mp;
 	}
 	
-	//searching Missing-Report by name
+	//searching Missing-Report by name*
 		public List<MissingPerson> searchByName(String name){
 			Session session=sf.openSession();
 			Criteria cr=session.createCriteria(MissingPerson.class);
@@ -57,7 +57,7 @@ public class MissingDAO {
 			
 		}
 		//remove a friend
-		public void removeById(String id){
+		public void removeById(int id){
 			Session session=sf.openSession();
 			Transaction tr=session.beginTransaction();
 			MissingPerson mp=new MissingPerson(); mp.setId(id);
@@ -65,5 +65,14 @@ public class MissingDAO {
 			tr.commit();
 			session.close();
 		}
-
+      //update status of report
+		public void UpdateMissing(MissingPerson missingperson)
+		{
+			Session session=sf.openSession();
+			Transaction tr=session.beginTransaction();
+			session.update(missingperson);
+			tr.commit();
+			session.close();
+			
+		}
 }

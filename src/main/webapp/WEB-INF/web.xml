@@ -178,6 +178,31 @@
   	<description></description>
   	<servlet-class>com.prince.RemoveAllReport</servlet-class>
   </servlet>
+    <servlet>
+  	<servlet-name>RemoveReport</servlet-name>
+  	<display-name>RemoveReport</display-name>
+  	<description></description>
+  	<servlet-class>com.prince.RemoveReport</servlet-class>
+  </servlet>
+    <servlet>
+    	<servlet-name>ImageLoader</servlet-name>
+    	<display-name>ImageLoader</display-name>
+    	<description></description>
+    	<servlet-class>com.prince.ImageLoader</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>UpdateMissingEditcontroller</servlet-name>
+    	<display-name>UpdateMissingEditcontroller</display-name>
+    	<description></description>
+    	<servlet-class>com.prince.UpdateMissingEditcontroller</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>UpdateMissing</servlet-name>
+    	<display-name>UpdateMissing</display-name>
+    	<description></description>
+    	<servlet-class>com.prince.UpdateMissing</servlet-class>
+    </servlet>
+  
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
   	<url-pattern>/SaveUser</url-pattern>
@@ -290,6 +315,22 @@
   	<servlet-name>RemoveAllReport</servlet-name>
   	<url-pattern>/RemoveAllReport</url-pattern>
   </servlet-mapping>
+ <servlet-mapping>
+  	<servlet-name>RemoveReport</servlet-name>
+  	<url-pattern>/RemoveReport</url-pattern>
+  </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>ImageLoader</servlet-name>
+ 	<url-pattern>/ImageLoader</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>UpdateMissingEditcontroller</servlet-name>
+ 	<url-pattern>/UpdateMissingEditcontroller</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>UpdateMissing</servlet-name>
+ 	<url-pattern>/UpdateMissing</url-pattern>
+ </servlet-mapping>
  
   
 </web-app>
