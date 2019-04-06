@@ -88,7 +88,7 @@
 	<div class="container">
 		<div class="card">
 			<div class="container" class="row">
-				<form action="SavePolice">
+				<form action="SavePolice" method="post">
 					<div class="row">
 						<br>
 						<div align="Center">

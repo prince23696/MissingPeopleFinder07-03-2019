@@ -1,4 +1,4 @@
-package com.prince;
+package com.prince.DAO;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.prince.Data;
 import com.prince.entities.Contact;
 import com.prince.entities.NGO;
 

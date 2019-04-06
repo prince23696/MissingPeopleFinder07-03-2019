@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.prince.DAO.MissingDAO;
+
 public class RemoveReport extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,

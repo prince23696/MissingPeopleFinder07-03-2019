@@ -11,9 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.prince.DAO.UserDAO;
 import com.prince.entities.User;
 public class SaveUser extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//read the data
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");

@@ -89,13 +89,13 @@
 	<div class="container">
 		<div class="card">
 			<div class="container" class="row">
-				<form action="SaveUser">
+				<form action="SaveUser" method="post">
 					<div class="row">
 						<br>
 						<div align="Center">
 
 							<h4 styleclass="header center">Registration Form User</h4>
-						</div>
+						</div></div>
 						<div class="row">
 							<div class="input-field col s10 offset-s1">
 								<i class="material-icons prefix">account_circle</i> <input

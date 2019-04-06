@@ -102,11 +102,11 @@
 			<tr>
 				<td><%=id %></td>
 				<td><%=name%></td>
-				<td><%=Dob%>
-				<td><%=gender%>
-				<td><%=image%>
-				<td><%=mobile%>
-				<td><%=status%>
+				<td><%=Dob%></td>
+				<td><%=gender%></td>
+				<td><img width="100" height="100"src="ImageLoader?id=<%=id%>" /></td>
+				<td><%=mobile%></td>
+				<td><%=status%></td>
 				<td><a href="RemoveReport?id=<%=id%>">[X]</a></td>
 				<td><label> <input type="checkbox" name=id
 						value=<%=id%> /> <span></span>

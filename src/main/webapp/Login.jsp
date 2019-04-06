@@ -70,7 +70,7 @@
 		<div class="card">
 
 			<div class="container" class="row">
-				<form action="VerifyUser">
+				<form action="VerifyUser" method="post">
 					<div class="row">
 
 						<div align="Center">

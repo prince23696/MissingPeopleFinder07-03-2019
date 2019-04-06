@@ -7,10 +7,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.prince.DAO.NGODAO;
 import com.prince.entities.NGO;
 
 public class SaveNGO extends HttpServlet {
-	protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		// read the data
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");

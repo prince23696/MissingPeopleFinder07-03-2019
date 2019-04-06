@@ -78,14 +78,14 @@
 	<p>You can login to our site by this steps:</p>
 	<p>For login to our site you have go to Login option enter your
 	   name and password and enter login button.Then you are login to our site.</p>
-	</div>
+	
 	<br>
 	<h4>Contact to our site....</h4>
 <h5>Email:</h5><br>
-<p>XYZ@GMAIL.COM<pr>
+<p>XYZ@GMAIL.COM<p>
 
 <h5>Mobile:</h5><br>
-<p>8085798656<pr>
-	<br> 
+<p>8085798656<p>
+	<br></div> 
 </body>
 </html>

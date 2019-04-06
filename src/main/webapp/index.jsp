@@ -16,10 +16,10 @@
 		var elems = document.querySelectorAll('.dropdown-trigger');
 		var instances = M.Dropdown.init(elems);
 	});
-	 document.addEventListener('DOMContentLoaded', function() {
-		    var elems = document.querySelectorAll('.slider');
-		    var instances = M.Slider.init(elems);
-		  });
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.slider');
+		var instances = M.Slider.init(elems);
+	});
 </script>
 </head>
 <body bgcolor="#eeeeee">
@@ -61,19 +61,20 @@
 				Helping For Missing Person</h5>
 			<br>
 		</div>
-		<br> <br> 
-		<a href="MissingRegister.jsp" class="waves-effect waves-light btn-large red right">I WANT TO
-			FIND SOME ONE</a>
-	    <a href="ShowMissingHome.jsp" class="waves-effect waves-light btn-large red left">I WANT TO HELP</a>
+		<br> <br> <a href="MissingRegister.jsp"
+			class="waves-effect waves-light btn-large red right">I WANT TO
+			FIND SOME ONE</a> <a href="ShowMissingHome.jsp"
+			class="waves-effect waves-light btn-large red left">I WANT TO
+			HELP</a>
 	</div>
 	<br>
 	<br>
 	<br>
-	<div class="slider" style="height:500px;">
+	<div class="slider" style="height: 500px;">
 		<ul class="slides">
 			<li><img src="images/missing"></li>
 			<li><img src="images/missing1"></li>
-			<li><img src="images/missing2"/></li>
+			<li><img src="images/missing2" /></li>
 			<li><img src="images/missing3"></li>
 		</ul>
 	</div>

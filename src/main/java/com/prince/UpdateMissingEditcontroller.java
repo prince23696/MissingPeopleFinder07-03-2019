@@ -19,7 +19,7 @@ public class UpdateMissingEditcontroller extends HttpServlet {
 		Session sf = Data.getSF().openSession();
 		MissingPerson id1 = sf.get(MissingPerson.class, id);
 		HttpSession session = request.getSession();
-		session.setAttribute("missingperson", id1);
+		session.setAttribute("missingperson",id1);
 		response.sendRedirect("UpdateMissing.jsp");
 
 	}

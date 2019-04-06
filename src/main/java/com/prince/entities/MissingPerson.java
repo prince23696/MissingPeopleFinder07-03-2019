@@ -172,6 +172,30 @@ public class MissingPerson {
 				+ ", outfit=" + outfit + ", lastseen=" + lastseen + ", extra="
 				+ extra + ", image=" + image + "]";
 	}
+	public MissingPerson(String status) {
+		super();
+		this.status = status;
+	}
+	public MissingPerson(String status, String name, String dob, String area,
+			String address, String mobile, String complextion, String hair,
+			String identi_mark, String build, String height, String outfit,
+			String lastseen, String extra) {
+		super();
+		this.status = status;
+		this.name = name;
+		this.dob = dob;
+		this.area = area;
+		this.address = address;
+		this.mobile = mobile;
+		this.complextion = complextion;
+		this.hair = hair;
+		this.identi_mark = identi_mark;
+		this.build = build;
+		this.height = height;
+		this.outfit = outfit;
+		this.lastseen = lastseen;
+		this.extra = extra;
+	}
 	
 		
 	

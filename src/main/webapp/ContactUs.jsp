@@ -53,7 +53,7 @@
 		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
 	</ul>
 	<h3 align="center">Contact-Us</h3>
-	<form action="SaveContact">
+	<form action="SaveContact" method="post">
 		<div class="container">
 			<div class="card " style="margin: -15px;:">
 				<div align="Center">

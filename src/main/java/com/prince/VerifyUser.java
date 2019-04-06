@@ -2,17 +2,22 @@ package com.prince;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.prince.DAO.NGODAO;
+import com.prince.DAO.PoliceDAO;
+import com.prince.DAO.UserDAO;
 import com.prince.entities.NGO;
 import com.prince.entities.Police;
 import com.prince.entities.User;
 
 public class VerifyUser extends HttpServlet {
-	protected void doGet(HttpServletRequest request,
+	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("userid");

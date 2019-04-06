@@ -107,7 +107,7 @@
 			<table class="highlight">
 				<tr>
 					<td>Image :</td>
-					<td><td><img width="100" height="100"src="ImageLoader?id=<%=id%>" /></td></td>
+					<td><img width="100" height="100"src="ImageLoader?id=<%=id%>" /></td>
 				</tr>
 
 				<tr>

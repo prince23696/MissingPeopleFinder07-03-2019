@@ -1,4 +1,4 @@
-package com.prince;
+package com.prince.DAO;
 
 import java.util.List;
 
@@ -9,6 +9,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
+
+import com.prince.Data;
 import com.prince.entities.MissingPerson;
 
 public class MissingDAO {

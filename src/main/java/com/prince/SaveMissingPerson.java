@@ -16,6 +16,7 @@ import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
 
+import com.prince.DAO.MissingDAO;
 import com.prince.entities.MissingPerson;
 
 public class SaveMissingPerson extends HttpServlet {
