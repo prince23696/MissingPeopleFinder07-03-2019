@@ -1,5 +1,5 @@
 <%@page
-	import="com.prince.entities.MissingPerson,com.prince.*,java.sql.Blob,org.hibernate.criterion.Restrictions,org.hibernate.Session,java.util.List,org.hibernate.Criteria,org.hibernate.criterion.Criterion"%>
+	import="com.prince.entities.MissingPerson,com.prince.DAO.*,com.prince.*,java.sql.Blob,org.hibernate.criterion.Restrictions,org.hibernate.Session,java.util.List,org.hibernate.Criteria,org.hibernate.criterion.Criterion"%>
 <html>
 <head>
 <title>Missing People Finder</title>

@@ -76,7 +76,6 @@
 	</nav>
 	<br>
 	<br>
-
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -95,17 +94,17 @@
 
 							<h4 styleclass="header center">Update Report Status</h4>
 						</div>
-							<div class="row">
-								<div class="input-field col s10 offset-s1">
-									<i class="material-icons prefix">person</i> <select
-										name="status">
-										<option disabled selected>Status :</option>
-										<option>Missing</option>
-										<option>Found</option>
-										<option>In-Process</option>
-									</select><label>Status</label>
-								</div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<i class="material-icons prefix">person</i> <select
+									name="status">
+									<option disabled selected>Status :</option>
+									<option>Missing</option>
+									<option>Found</option>
+									<option>In-Process</option>
+								</select><label>Status</label>
 							</div>
+						</div>
 						<div class="row">
 							<div class="col s5 offset-s1" onclick="check()">
 								<button type="submit" class="btn red darken-4"
