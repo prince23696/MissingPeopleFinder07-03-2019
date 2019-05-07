@@ -202,6 +202,12 @@
     	<description></description>
     	<servlet-class>com.prince.UpdateMissing</servlet-class>
     </servlet>
+    <servlet>
+    	<servlet-name>ImageScroller</servlet-name>
+    	<display-name>ImageScroller</display-name>
+    	<description></description>
+    	<servlet-class>com.prince.ImageScroller</servlet-class>
+    </servlet>
   
   <servlet-mapping>
   	<servlet-name>SaveUser</servlet-name>
@@ -330,6 +336,10 @@
  <servlet-mapping>
  	<servlet-name>UpdateMissing</servlet-name>
  	<url-pattern>/UpdateMissing</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>ImageScroller</servlet-name>
+ 	<url-pattern>/ImageScroller</url-pattern>
  </servlet-mapping>
  
   

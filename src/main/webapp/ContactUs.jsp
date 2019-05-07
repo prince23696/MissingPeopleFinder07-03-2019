@@ -42,10 +42,7 @@
 			</div>
 		</div>
 	</nav>
-	<br>
-	<br>
-
-	<ul id="dropdown1" class="dropdown-content">
+		<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
 		<li><a href="policeregistration.jsp">Police-Registration</a></li>
@@ -58,7 +55,7 @@
 			<div class="card " style="margin: -15px;:">
 				<div align="Center">
 
-					<h5 class="header center">Mail Us At XYZ@GMAIL.COM</h5>
+					<h5 class="header center">Mail Us At PRINCEGUPTA632@GMAIL.COM</h5>
 				</div>
 				<h5 class="header center">OR</h5>
 				<div class="row">

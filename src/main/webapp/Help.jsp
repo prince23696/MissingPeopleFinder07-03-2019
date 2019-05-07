@@ -53,8 +53,6 @@
 			</div>
 		</div>
 	</nav>
-	<br>
-	<br>
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -65,27 +63,30 @@
 	<h3 align="center">Need-Help!!!!</h3>
 
 	<div class="container">
-<h4>How to Register????</h4>
-<br><p>You can register to our site to just follow this simple step:</p>
-<p>If you are a User : go to the register menu then their submenu
-		User Registration and fill your information and click to the SingUp
-		Button. You are successful registered to our site(If You Get Message
-		Action Performed!). For NGO User : Go to the Ngo submenu and for
-		police go to the Police submenu and fill your information.</p>
-	<br>
-	<h4>How to login????</h4>
-	<br>
-	<p>You can login to our site by this steps:</p>
-	<p>For login to our site you have go to Login option enter your
-	   name and password and enter login button.Then you are login to our site.</p>
-	
-	<br>
-	<h4>Contact to our site....</h4>
-<h5>Email:</h5><br>
-<p>XYZ@GMAIL.COM<p>
+		<div class="card">
+			<h5>How to Register????</h5>
+			<p>You can register to our site to just follow this simple step:</p>
+			<p>If you are a User : go to the register menu then their SubMenu
+				User Registration and fill your information and click to the SingUp
+				Button. You are successful registered to our site(If You Get Message
+				Action Performed!). For NGO User : Go to the NGO SubMenu and for
+				police go to the Police SubMenu and fill your information.</p>
 
-<h5>Mobile:</h5><br>
-<p>8085798656<p>
-	<br></div> 
+			<h5>How to login????</h5>
+			<p>You can login to our site by this steps: For login to our site
+				you have go to Login option enter your name and password and enter
+				login button.Then you are login to our site.</p>
+
+			
+			<h5>Contact to our site....</h5>
+			<h5>Email:</h5>
+			<br>
+			<b>PRINCEGUPTA632@GMAIL.COM</b>
+			<h5>Mobile:</h5>
+			<br>
+			<b>9893191947</b>
+
+		</div>
+	</div>
 </body>
 </html>

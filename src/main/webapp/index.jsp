@@ -1,3 +1,5 @@
+<%@page
+	import="com.prince.entities.MissingPerson,com.prince.*,java.sql.Blob,org.hibernate.Session,java.util.List,org.hibernate.Criteria"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +72,13 @@
 	<br>
 	<br>
 	<br>
-	<div class="slider" style="height: 500px;">
+	<%
+		Session session1 = Data.getSF().openSession();
+		//fetching using QBC
+		Criteria cr = session1.createCriteria(MissingPerson.class);
+		List<MissingPerson> flist = cr.list();
+	%>
+	<div class="slider" "height: 500px;">
 		<ul class="slides">
 			<li><img src="images/missing"></li>
 			<li><img src="images/missing1"></li>
@@ -78,6 +86,39 @@
 			<li><img src="images/missing3"></li>
 		</ul>
 	</div>
+	<h4 class="color">Records List</h4>
+	<div class="col-offset=5"
+		style="text-align: center; width: 200px; height: 500px;">
+
+		<table class="highlight" align="left">
+
+			<tr>
+				<th>Unique Id</th>
+				<th>Image</th>
+				<th>Status</th>
+			</tr>
+			<%
+				for (MissingPerson f : flist) {
+					int id = f.getId();
+					String status = f.getStatus();
+			%>
+			<tr>
+				<td><marquee direction="up">
+						<%=id%>
+					</marquee></td>
+				<td><marquee direction="up">
+						<img width="100" height="100" src="ImageLoader?id=<%=id%>" />
+					</marquee></td>
+				<td><marquee direction="up">
+						<%=status%></marquee></td>
+			</tr>
+			<%
+				}
+			%>
+		</table>
+	</div>
+
+
 
 </body>
 </html>

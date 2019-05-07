@@ -57,9 +57,6 @@
 			</div>
 		</div>
 	</nav>
-	<br>
-	<br>
-
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="registration.jsp">User-Registration</a></li>
 		<li class="divider"></li>
@@ -67,23 +64,27 @@
 		<li class="divider"></li>
 		<li><a href="ngoregistration.jsp">NGO-Registration</a></li>
 	</ul>
-	<h3>
-		<center>About-Us</center>
-	</h3>
-
-	<P>
-		<b>Missing People is an initiative of people from various walks of
-			society. We have got together to address with the altruistic motive
-			of helping reunite missing people with their families.<br> A
-			child may be lost and he may not find the way back home. An adult
-			with mental health issues may be lost and there is no way he or she
-			will be able to find his/her way back to their families.<br>
-			They languish and suffer while their families grieve and search
-			frantically. Our mission is to help such lost children or adults
-			reunite with their families.
-		</b></b>
-	</p>
-
-
+	<h3 align="center">About-Us</h3>
+	<div class="container">
+		<div class="card">
+			
+			<font size="5" face="Times New Roman">	<b>Missing People is an initiative of people from various walks
+					of society. We have got together to address with the altruistic
+					motive of helping reunite missing people with their families.<br>
+					A child may be lost and he may not find the way back home. An adult
+					with mental health issues may be lost and there is no way he or she
+					will be able to find his/her way back to their families.<br>
+					Tracking missing persons and identifying unidentified bodies is now
+					easier for the police and concernt person with the availability of
+					information online. The police are now taking steps to empower the
+					public in getting access to the same content so that the common man
+					can track missing persons online. Our mission is to bring all the
+					lost person to their home, or to bring the information to the lost
+					people to their families, our workers collect information about
+					these lost people and regularly update the information on website.
+				</b>
+			</font>
+		</div>
+	</div>
 </body>
 </html>
